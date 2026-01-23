@@ -1,0 +1,7 @@
+picoctf sqlilite writeup
+
+1.just normal sql injection
+
+payload:' OR 1=1 -- 
+
+2.get flag

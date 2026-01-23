@@ -1,0 +1,12 @@
+picoctf MatchTheRegex writeup
+
+1.look source code and know its regex is ^p.....F!?
+
+^ : start of regex
+p : use p
+. : any char
+F : use F
+! : use !
+? : one char before it is zero or one time
+
+2.i just use picoCTF and get flag

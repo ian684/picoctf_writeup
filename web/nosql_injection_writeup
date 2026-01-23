@@ -1,0 +1,9 @@
+picoctf nosql_injection writeup
+
+1.download source 
+
+2.know that flag is token so we need to pass ctf email password
+
+3.because we know it is nosql injection, so we just use {"$ne": null} to pass
+
+4.use burp to get the package, and get token, namely flag

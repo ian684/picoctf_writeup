@@ -1,0 +1,14 @@
+picoctf crack_the_ower writeup
+
+1.try to use factorize but need to wait so long(might several months)
+
+2.look first and second hint,so try to thing about 
+c = m**e mod n
+=> c = m**e - k*n
+=> m = (c + k*n)**1/e
+
+3.try 0 to 20 and get a int which can completely take the e root (use gmpy2.iroot(m , e))
+
+4.just use ans.to_bytes((ans.bit_length() + 7) // 8 , byteorder="big") to get bytes
+
+5.get flag!

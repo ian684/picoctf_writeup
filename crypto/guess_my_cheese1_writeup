@@ -1,0 +1,30 @@
+picoctf guess_my_cheese1 writeup
+
+1.try to connect server
+
+2.it give me one encrypted string(ans) and two function
+
+3.try to use guess function and it just let me input a string and confirm it
+
+4.also try encrypt function and just input "aaa" but it says it isnt a cheese name
+
+5.so i search a cheese name ("MOZZARELLA") and it give me a encrypted string (aim)
+
+6.but i dont know encrypted method so i look hint
+
+7.after google, we know it might be a affine cipher
+
+8.use a python code and aim to burst a and b
+	for i in a:
+   ...:     for j in b:
+   ...:         temp = ""
+   ...:         for x in aim:
+   ...:             temp += chr((pow(i , -1 , 26)*(ord(x) - 65 - j))%26 + 65)
+   ...:         if temp == "MOZZARELLA":
+   ...:             print(i , j)
+
+9.just get a and b and then use python code and ans to get the passwd
+
+10.use guess function and input the passwd
+
+11.get flag!

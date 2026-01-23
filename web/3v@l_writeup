@@ -1,0 +1,11 @@
+picoctf 3v@l writeup
+
+1.try to input some formula and get a answer
+2.look picoctf's descrption hint know that it uses eval() to calculate
+3.but __import__('os').system('ls') is not able because some filter (os,ls....)
+4.open a source code and find a hint is say some characters like %...,..,\,/,\u,.py,0x 
+5.after analyze know urlencode, hex, .., some file, \, /, unicode escape, bash_command
+6.after search some pass ideas, i use __import__('subprocess').check_output(['bash', '-c', '$(echo bHM= | base64 --decode)'], text=True)
+7.after i can exec any command, i dont know where is flag
+8.i use second hint to know flag is in flag.txt
+9.ofcourse, i use __import__('subprocess').check_output(['bash', '-c', '$(echo Y2F0IC9mbGFnLnR4dA== | base64 --decode)'], text=True) to cat the flag (picoflag{})

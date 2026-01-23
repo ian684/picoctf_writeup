@@ -1,0 +1,19 @@
+picoctf findme writeup
+
+1.use test and test! to login 
+
+2.i try to input and analyze the source code but nothing 
+
+3.just found it wont fetch any response
+
+4.but i try a xss (because i found it will insert my input in that search result but it doesnt...[return false]/)
+
+5.and then i try redirect (because i think there is a /home? so i can add something but nothing happened)
+
+6.so i check hint (redirections)
+
+7.i just check two redirect pages (either named flag)
+
+8.just get two base64 string 
+
+9.decode them and get flag!

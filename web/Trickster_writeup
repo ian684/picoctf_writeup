@@ -1,0 +1,31 @@
+picoctf Trickster writeup
+
+# use burp to change value !!!
+
+1.obviously,that is a picutre upload challenge 
+
+2.first, try to upload a normal picture(.png)
+
+3.and try to upload some shell code(.php.png) because it has a <accept='.png'>
+
+4.it say ours file not valid picture
+
+5.so try to visit /robots.txt
+
+6.appears diallow -> /instructions.txt,/uploads/
+
+7.look into /instruction.txt,we know that we can add "PNG" to pass
+
+8.also know we can find our shell code in /uploads/
+
+9.try to add "PNG"
+
+10.but when we visit /uploads/shell.php.png, it hasnt been executed
+
+11.we try to upload .htaccess but invalid(.png)
+
+12.after search, i know we just need to change our file name to "shell.png.php" to pass and execute
+
+13.use cmd and && & | || ; to execute command but only ; can use so use ; and cd ls cat
+
+14.get flag

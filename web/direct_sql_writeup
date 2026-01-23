@@ -1,0 +1,12 @@
+picoctf direct_sql writeup
+
+1.connect that
+
+2.try to use \h to know how to use command
+
+3.use \d to get table 
+
+4.use SELECT * FROM flags;
+# ; is important!!!
+
+5.get flag
