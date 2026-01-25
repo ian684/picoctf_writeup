@@ -1,0 +1,17 @@
+picoctf caas writeup
+
+1.just try to add some message in url
+
+2.know that cow can output our input 
+
+3.look index.js file and find there is a exec function (require('child_process');)
+
+4.use google to know how does it work and it just execute input (like ls cd pwd etc ..)
+
+5.so i input "pwd" in url but not work
+
+6.so i change to try `` and it works
+
+ls -> cat falg.txt
+
+7.get flag!
