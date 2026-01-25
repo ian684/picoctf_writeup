@@ -1,0 +1,11 @@
+picoctf roboto_sans writeup
+
+1.use search function in application but nothing ,so we might need to find flag in other page
+
+2.visit robots.txt and there are some base64 encoded string 
+
+3.just try to decode them (some string cannot be decoded)
+
+4.visit js/myfile.txt
+
+5.get flag!

@@ -1,0 +1,11 @@
+picoctf search_source writeup
+
+1.according to its topic, i guess it might need to find flag in source code
+
+2.and i try to find it in main page and nothing(there is a sentence ,not in here keep going)
+
+3.and i look first hint, so i go to inspect -> sources
+
+4.click "top" dir and input pico in bottom to search
+
+5.get flag!

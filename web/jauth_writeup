@@ -1,0 +1,15 @@
+picoctf jauth writeup
+
+1.use test Test123! to login
+
+2.find a token in cookie and decode it
+
+3.guess that we need to change user to admin 
+
+4.but we dont know key , so we need to bypass algorithm
+
+5.change hs256 to none and user to admin
+
+6.replace token and reload page 
+
+7.get flag!

@@ -1,0 +1,11 @@
+picoctf power_cookie writeup
+
+1.click that button and it says not open
+
+2.according to topic, so we just try to change cookie before click it
+
+3.but it still same, so we look its source code and know it will change its cookie after redirect to that page
+
+4.so we just change cookie in that page
+
+5.get flag!

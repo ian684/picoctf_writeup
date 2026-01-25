@@ -1,0 +1,7 @@
+picoctf forbidden_paths writeup
+
+1.because it says we cannot use absolute path to visit /flag.txt, so we just use ../ to pass it
+
+2.input ../../../../flag.txt
+
+3.get flag!

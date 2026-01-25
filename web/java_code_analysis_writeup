@@ -1,0 +1,42 @@
+picoctf java_code_analysis writeup
+
+1.use user user to login
+
+2.and find a book named flag so we might need to open it
+
+3.look first hint and know we need to find it
+
+4.look into java code,there is a generate secret key function(just return "1234")
+
+5.so we can use hs256 to decode its jwt
+
+6.use python code to decode
+import jwt
+
+token = input()
+
+secret = "1234"
+
+payload = jwt.decode(
+    token,
+    secret,
+    algorithms=["HS256"],
+    issuer="bookshelf"
+)
+
+print(payload)
+
+7.and get a jwt
+
+8.and we just change role to Admin and its userId (after analyze java code)
+
+9.i just find there just two user (admin and user),so i change userId to 2
+
+10.go to inspect -> application -> localstorage
+#this step is important for me
+
+11.replace its jwt and hs256
+
+12.reload page and open flag book
+
+13.get flag!

