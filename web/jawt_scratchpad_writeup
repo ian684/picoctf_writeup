@@ -1,0 +1,21 @@
+picoctf JaWT Scratchpad writeup
+
+1.according its name so i check jwt from cookie and application
+
+2.find a jwt in cookie, we might need to counterfeit a jwt
+
+3.first, decode header and payload
+
+{"typ":"JWT","alg":"HS256"}
+
+{"user":"ian"}
+
+4.and try to change HS256 to None but error
+
+5.i check the python source code and find def index() will check the user(admin) and it reveal key there
+
+6.so i just use key to encode a jwt and change ian to admin
+
+7.reload page
+
+8.get flag!

@@ -1,0 +1,33 @@
+picoctf rsa_oracle writeup
+
+1.connect and try encrypt decrypt
+
+2.and try to decrypt password and secret but it is blocked 
+
+3.look hints know we need to use a command to decrypt secret
+
+4.try it, it need a password, so we know we need to decrypt password and use it to decrypt secret
+
+5.google it and know we can use chosen plaintext attack
+
+6.so we writeup a python script (rsa_oracle.py)
+
+step 1 :encrypt a chosen plaintext (i choose 2)
+
+step 2 :compute c' = password * c2
+c2 = encrypted(b"\x02")
+
+step 3 :decrypt c', get 2 * password
+
+step 4 :divide it by 2
+
+step 5 :decode it (str -> dec -> hex -> bytes)
+
+step 6 :get a password
+
+7.use command and password to decrypt secret 
+
+8.get flag!
+
+
+#difficult for me

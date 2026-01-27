@@ -1,9 +1,10 @@
 import jwt
 import time
 
-secret = "1234"
+secret = "ilovepico"
 
-payload = {"role":"Admin","iss":"bookshelf","exp":1769915661,"iat":1769310861,"userId":2,"email":"user"}
+payload = {"user":"admin"}
+
 token = jwt.encode(
     payload,
     secret,

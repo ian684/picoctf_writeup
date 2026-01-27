@@ -1,0 +1,21 @@
+picoctf guess_my_cheese2 writeup
+
+1.download its list 
+
+2.try to connect the server
+
+3.know we might need to find which cheese does it encode and give me
+
+4.look first hint know it is sha256
+
+4.write or copy a python encode script (code/cheese2.py)
+#not only sha256 , there are some diffirent change 
+(utf-8,utf-16(big little),latin1)
+(salt -> insert append prepend)
+(lower upper original case)
+
+5.just compare the value and output
+
+6.send the cheese name and salt value
+
+7.get flag!

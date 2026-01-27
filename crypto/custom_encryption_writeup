@@ -1,0 +1,12 @@
+picoctf custom_encryption writeup
+
+1.look its encrypt python code
+
+2.and it gives us a, b, cipher
+
+3.just write a python code to decrypt it (custom_decryption.py)
+# its xor function reverse a string be careful
+
+4.get flat!
+
+ 
