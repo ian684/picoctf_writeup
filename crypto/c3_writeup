@@ -1,0 +1,28 @@
+picoctf c3 writeup
+
+1.look source code and cipher
+
+2.know that we need to decrypt that cypher
+
+3.so write a python script (c3.py)
+
+4.get 
+#asciiorder
+#fortychars
+#selfinput
+#pythontwo
+
+chars = ""
+from fileinput import input
+for line in input():
+    chars += line
+b = 1 / 1
+
+for i in range(len(chars)):
+    if i == b * b * b:
+        print chars[i] #prints
+        b += 1 / 1
+
+5.change chars to c3.py's output
+
+6.get flag!

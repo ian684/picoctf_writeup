@@ -1,0 +1,9 @@
+picoctf readmycert writeup
+
+1.there is a = at the end of the string
+
+2.so we just use base64.b64decode(b"") it
+
+3.check the information in output
+
+4.get flag!
