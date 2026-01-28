@@ -1,0 +1,11 @@
+picoctf substitution1 writeup
+
+1.download that file and look it
+
+2.also use substitution cipher online tool to decode it 
+
+3.but that is not a flag so we try to adjust flag
+
+4.i change a -> j to a -> q 
+
+5.get flag!

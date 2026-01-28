@@ -1,0 +1,7 @@
+picoctf vigenere writeup
+
+1.search vigenere cipher
+
+2.use key and write a python decrypted code to decode it
+(vigenere.py)
+3.get flag!

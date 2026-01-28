@@ -1,0 +1,19 @@
+picoctf HideToSee writeup
+
+1.download the image
+
+2.open the image and look some information in it
+
+3.know that it might need to be decoded by using atbash cipher
+
+4.look the hint and try to unzip it but cannot do that
+
+5.but i dont know how to read text in the image
+
+6.i search some command (exiftool , strings , steghide , binwalk)
+
+7.use steghide info know there is a encrypted.txt so i use steghide extract it
+
+8.get a encrypted.txt and read it
+
+9.get flag!
