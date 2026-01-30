@@ -1,0 +1,11 @@
+picoctf mini_rsa writeup
+
+1.download file and know its e is small, so we can use python code to bomb it
+def cal(n , e , c):
+    import gmpy2
+    for k in range(20):
+        r, ok = gmpy2.iroot(c + k * n , 3)
+        print(ok , r)
+2.use  ans.to_bytes((ans.bit_length() + 7) // 8 , byteorder="big") to decode
+
+3.get flag!

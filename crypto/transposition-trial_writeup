@@ -1,0 +1,9 @@
+picoctf transposition-trial writeup
+
+1.look description hint , and check the file 
+
+2.guess that we just need to change some positions to get flag
+
+3.use transposition-trial.py to get 
+
+4.get flag!

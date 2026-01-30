@@ -1,0 +1,7 @@
+picoctf basic-mod2 writeup
+
+1.look description hint and know we need to use mod and inverse
+
+2.use basic-mod2.py to decode
+
+3.get flag!

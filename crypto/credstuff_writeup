@@ -1,0 +1,9 @@
+picoctf credstuff writeup
+
+1.search "cultiris" in usernames.txt and know it is in line 378
+
+2.search line 378 in passwords.txt and find a string (likes flag)
+
+3.try use cacear cipher to decode it 
+
+4.get flag!

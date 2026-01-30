@@ -1,0 +1,13 @@
+picoctf Mind your Ps and Qs writeup
+
+1.small n, so try to get phi 
+
+2.use factorize to get p and q
+
+3.phi = (p - 1)(q - 1) and use d = pow(e , -1 , phi) to get private key
+
+4.use m = pow(c , d , n) to get message 
+
+5.turn it to bytes
+
+6.get flag!

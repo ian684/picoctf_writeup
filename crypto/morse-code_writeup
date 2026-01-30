@@ -1,0 +1,7 @@
+picoctf morse-code writeup
+
+1.open file and know it is morse code audio file
+
+2.use online tool to decode it
+
+3.get flag!

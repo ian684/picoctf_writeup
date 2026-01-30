@@ -1,0 +1,7 @@
+picoctf rail-fence writeup
+
+1.look its description hint , web side and file
+
+2.use rail fence decrypted code(rail-fence.py)
+
+3.get flag!
