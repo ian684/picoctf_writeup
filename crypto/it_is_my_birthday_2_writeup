@@ -1,0 +1,38 @@
+picoctf It is my Birthday 2 writeup
+
+1.download file and visit verify page
+
+
+2.look its hint and know we need to satisfy 
+
+(1).same sha1
+(2).last 1000bytes same like invite.pdf
+(3).two different pdf
+(4).valid pdf
+
+3.so we use two different pdf and same sha1 from https://shattered.io/ (popular two different file but same sha1)
+
+4.we need to satisfy (4). so we cannot add something invalid inside, but we can add after EOF
+
+5.so we can use these command to complete 
+
+wget https://challenge-files.picoctf.net/c_wily_courier/.../invite.pdf
+wget https://shattered.io/static/shattered-1.pdf
+wget https://shattered.io/static/shattered-2.pdf
+
+tail -c 1000 invite.pdf > suffix.bin
+
+cat shattered-1.pdf suffix.bin > collision1.pdf
+cat shattered-2.pdf suffix.bin > collision2.pdf
+
+5.and we can use these command to verify 
+
+sha1sum collision1.pdf collision2.pdf
+tail -c 1000 collision1.pdf | cmp - suffix.bin
+file collision1.pdf collision2.pdf
+
+6.upload files
+
+7.get flag!
+
+#this is very difficult for me because i dont know that vulnerable

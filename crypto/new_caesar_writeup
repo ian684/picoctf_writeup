@@ -1,0 +1,11 @@
+picoctf new_caesar writeup
+
+1.look source code
+
+2.know encode and shift method, find its len(key) == 1 and just use 16 letters
+
+3.just writeup the python code to bomb (new_caesar.py)
+
+4.guess which likes flag
+
+5.get flag!

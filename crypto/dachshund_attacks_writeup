@@ -1,0 +1,12 @@
+picoctf Dachshund Attacks writeup
+
+1.it says there is small d 
+
+2.so use wiener attack to get d
+
+3.use d to decode 
+
+4.get flag
+
+
+wiener attack code: wiener_attack.py

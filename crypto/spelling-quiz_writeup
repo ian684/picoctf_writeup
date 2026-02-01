@@ -1,0 +1,9 @@
+picoctf spelling-quiz writeup
+
+1.open all file to look
+
+2.know that python code just to map alph and change it
+
+3.so we use substitution cipher and frequency attack 
+
+4.get flag!
