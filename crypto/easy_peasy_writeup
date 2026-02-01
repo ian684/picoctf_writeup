@@ -1,0 +1,31 @@
+picoctf easy peasy writeup
+
+1.look its source code and know it is otp
+
+2.notice that we can use its key several times
+
+3.it start at 0 and end at 50000, so we send 50000 - len(bytes(flag)) (32)
+
+encrypt 'a'*49968
+
+#important !! we cannot send it in one time because it might not be correct or lose some chr
+so we use
+
+python3 - <<'PY' | nc host port
+print("a"*49968)
+PY
+
+4.after we send that , we can get the same key xor with flag
+
+python3 - <<'PY' | nc host port
+print("a"*32)
+PY
+
+aim = encrypt 'a'*32
+key = aim xor 'a'*32
+
+5.so we also can use this key to get flag
+
+flag = encrypt flag xor key
+
+6.get flag!
