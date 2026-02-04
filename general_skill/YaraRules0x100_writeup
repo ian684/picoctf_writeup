@@ -1,0 +1,11 @@
+picoctf YaraRules0x100 writeup
+
+1.search yara and know it is a tool that can match some strings to filter malware
+
+2.but i dont know how to use it, so i search other writeup
+
+3.and try to write a yara (YaraRules0x100.txt)
+
+4.connect it 
+
+5.get flag!

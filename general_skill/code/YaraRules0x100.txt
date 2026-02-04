@@ -1,0 +1,12 @@
+rule Rule {
+        strings:
+                $a = "YaraRules0x100" wide ascii
+                $b = {4d 5a 90 00}
+                $c = "IsDebuggerP" wide ascii
+                $d = "Startup" wide ascii
+                $e = "LookupPriv" wide ascii
+                $f = "debugger process" wide ascii
+                $g = {4D 5A}
+        condition:
+                $a and $b and $c and $d and $e and $g or $f
+}

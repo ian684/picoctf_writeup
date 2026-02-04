@@ -1,0 +1,21 @@
+picoctf Special writeup
+
+1.just try to input some commands but it seems like be converted
+
+2.think about encode but unlike
+
+3.input some random strings, we can know that it might convert input to real words and turn first alph to capital
+
+#i dont have any idea now.....
+
+4.just input other random strings
+
+5.when i input ";", it can split command and run command after it without converted
+
+6.so i use 
+
+"dkfjdf;ls" get dir -> blangh
+"dkfjdf;ls;cd blangh;ls;" get file -> flag.txt
+"dkfjdf;ls;cd blangh;ls;cat flag.txt;" 
+
+7.get flag!

@@ -1,0 +1,22 @@
+picoctf Specialer writeup
+
+1.try some commands but just likes "cd, pwd" are valid
+
+2.try to press "tab" , there are all valid command 
+
+3.there is printf , so we can use it
+
+4.use "cd " and press "tab" to look all files or dirs there
+
+#can also use "for , if" to write a shell code
+
+5.just try all dirs and if it is a file, use 
+
+$file=""
+printf "%s" $(<$file)
+
+to print it
+
+7.get flag!
+
+#flag is in /home/ctf-player/ala/Kazma.txt
