@@ -1,0 +1,56 @@
+picoctf 1_wanna_b3_a_r0ck5tar writeup
+
+1.after search, i use rockstar language to compile
+
+2.download compiler and look output
+
+Rocknroll = True
+Silence = False
+a_guitar = 10
+Tommy = 44
+Music = 170
+the_music = input()
+if the_music == a_guitar:
+    print("Keep on rocking!")
+    the_rhythm = input()
+    if the_rhythm - Music == False:
+        Tommy = 66
+        print(Tommy!)
+        Music = 79
+        Jamming = 78
+        print(Music!)
+        print(Jamming!)
+        Tommy = 74
+        print(Tommy!)
+        They are dazzled audiences
+        print(it!)
+        Rock = 86
+        print(it!)
+        Tommy = 73
+        print(it!)
+        break
+        print("Bring on the rock!")
+        Else print("That ain't it, Chief")
+        break
+
+3.just look it, and analyze its output
+
+4.but there is one sentence which we dont know what it is (They are dazzled audiences)
+
+5.so use online interpreter to check and get answer
+
+They are dazzled audiences
+shout They
+
+6.just turn all output to ascii
+
+7.get flag!
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+picoctf flag_shop writeup
+
+1.look its hint and know we need to use a big number to pass
+
+2.know i need to input a big number in buying first flag , use flag_shop.py to exploit it
+
+# i use 2147483647 // 900 = 2386092 but if you use this in first flag your account will be a negative so plus a few of numbers 
+
+3.get flag!

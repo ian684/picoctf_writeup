@@ -1,0 +1,17 @@
+picoctf Permissions writeup
+
+1.connect to server and login
+
+2.goto / and use find | grep "flag" but all of things might useful
+
+3.look description and know we need to look root dir
+
+4.try to open it but no permission
+
+5.use "sudo -l" to look which powerful command we can use
+
+6.look output , we can use vi to inspect file or dir
+
+7.so we use "sudo vi root" and open flag.txt
+
+8.get flag!

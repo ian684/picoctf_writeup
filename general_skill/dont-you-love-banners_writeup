@@ -1,0 +1,37 @@
+picoctf dont-you-love-banners writeup
+
+1.connect first port and get a password (My_Passw@rd_@1234)
+
+2.connect second port and use that password to get in
+
+3.answer two questions (DEF CON , DRAPER)
+
+4.then we can run the shell, look text and banner content but nothing
+
+5.go to / and use find | grep "flag" , know flag is in /root/flag.txt
+
+6.but we dont have power to read it , so look /root/script.py
+
+7.find that there is 
+
+ try:
+      with open("/home/player/banner", "r") as f:
+        print(f.read())
+    except:
+      print("*********************************************")
+      print("***************DEFAULT BANNER****************")
+      print("*Please supply banner in /home/player/banner*")
+      print("*********************************************")
+
+we may be can use this to read flag.txt
+
+7.after searching , we know we can use ln -s to link file (mean if we link A to B and we cat A, output B)
+
+8.so we use 
+
+rm banner
+ln -s /root/flag.txt banner
+
+9.reconnect it
+
+10.get flag!

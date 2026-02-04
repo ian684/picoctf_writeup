@@ -1,0 +1,13 @@
+picoctf useless writeup
+
+1.connect it and login 
+
+2.look useless file and know it is a calculator
+
+3.try to run this file and it nothing
+
+4.return to the description, we find a "man" at the top
+
+5.so try to use "man useless"
+
+6.get flag!

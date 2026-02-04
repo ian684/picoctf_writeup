@@ -1,0 +1,11 @@
+picoctf pw crack 3 4 5 writeup
+
+1.just use encode function to encode password
+
+2.find which password match
+
+3.input password
+
+4.get flag!
+
+3 4 5 are same , just amount of password different

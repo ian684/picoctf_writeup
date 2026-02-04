@@ -1,0 +1,9 @@
+picoctf plumbing writeup
+
+1.try to connect it
+
+2.get so many output
+
+3.use nc ..... | grep "pico"
+
+4.get flag!

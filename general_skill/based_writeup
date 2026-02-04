@@ -1,0 +1,11 @@
+picoctf based writeup
+
+1.connect to server and know it just need to convert many kind of base to ascii
+
+2.test it , just use ipython 
+
+3.find it might just have binary , hexadecimal and octal
+
+4.write a python auto code (based.py)
+
+5.get flag!

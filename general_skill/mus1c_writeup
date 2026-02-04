@@ -1,0 +1,9 @@
+picoctf mus1c writeup
+
+1.download file and guess it might be rockerstar language
+
+2.use online interpreter and get several numbers
+
+3.convert to ascii
+
+4.get flag!
