@@ -1,0 +1,7 @@
+picoctf la cifra de writeup
+
+1.use vinegere cipher to decode it
+
+2.i use this https://www.guballa.de/vigenere-solver to decode
+
+3.get flag!

@@ -1,0 +1,17 @@
+picoctf No Padding, No Problem writeup
+
+1.use priciple at the bottom
+
+2.just encrypt(2) and multiply with c
+
+3.decrypt it and get 2 * m
+
+4.divided by 2
+
+5.decode to bytes
+
+6.get flag!
+
+
+# (m**e) * (2**e) mod n = (2 * m)**e mod n
+# after decrypt => 2 * m 

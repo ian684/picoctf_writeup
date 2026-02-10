@@ -1,0 +1,11 @@
+picoctf john_pollard writeup
+
+1.use https://certlogik.com/decoder to decode this certificate
+
+2.and look its first hint know we need to get p and q from n (modulus)
+
+3.so exploit modulus to get p , q
+
+4.use picoCTF{p,q} or picoCTF{q,p}
+
+5.get flag!

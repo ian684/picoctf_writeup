@@ -1,0 +1,39 @@
+picoctf Super Serial writeup
+
+1.try to login but it gives us some error
+
+2.try visit /robots.txt , there is a /admin.phps
+
+3.so we know we might read phps files by change .php to .phps
+
+4.try visit index.phps , and look its source code
+
+5.find there are also cookie.php and authentication.php
+
+6.also visit their .phps and find it takes our cookie to deserialize 
+
+7.so now , we can exploit that but we also need to find a object to use
+
+8.there is a access_log object and its functions can open and read file
+
+9.now write a serialized object , 
+
+most easy module =>
+
+O:<length_of_class_name>:"<class_name>":<property_count>:{
+    s:<length_of_property_name>:"<property_name>";<serialized_value>;}
+
+O=> object
+s=> property 
+
+our payload => O:10:”access_log”:1:{s:8:”log_file”;s:7:”../flag”;}
+
+10.cookie.php also uses urldecode and base64decode so we need to encode it
+
+=> TzoxMDoiYWNjZXNzX2xvZyI6MTp7czo4OiJsb2dfZmlsZSI7czo3OiIuLi9mbGFnIjt9
+
+11.set cookie (login=TzoxMDoiYWNjZXNzX2xvZyI6MTp7czo4OiJsb2dfZmlsZSI7czo3OiIuLi9mbGFnIjt9) and refresh
+
+12.get flag!
+
+# so so difficult...

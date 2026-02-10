@@ -1,0 +1,9 @@
+picoctf login writeup
+
+1.look its source code
+
+2.find a base64 encoded string in index.js
+
+3.decode it 
+
+4.get flag!

@@ -1,0 +1,9 @@
+picoctf easy1 writeup
+
+1.use table to reverse that encrypted flag
+
+2.key is row and flag is column
+
+3.flag is CRYPTOISFUN
+
+4.get flag!
