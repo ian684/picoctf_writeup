@@ -1,0 +1,10 @@
+picoctf Client-side-again writeup
+
+1.just try random string, look its source code
+
+2.there is a js code , might be a verify code
+
+3.deobfuscate it 
+=>use some online tools but also need to analyze by yourself
+
+4.get flag!

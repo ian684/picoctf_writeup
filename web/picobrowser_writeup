@@ -1,0 +1,9 @@
+picoctf picobrowser writeup
+
+1.click flag and it say we dont use picobrowser
+
+2.look hints , know we just need to use burp to change our request
+
+3.can change any other browser to picobrowser
+
+4.get flag!

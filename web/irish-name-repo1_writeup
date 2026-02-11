@@ -1,0 +1,11 @@
+picoctf Irish-Name-Repo 1 writeup
+
+1.just dig some message from source code but nothing
+
+2.look description and try to login
+
+3.just try sql injection and it prints some error to us so it might work
+
+4.use user="admin" OR 1=1 -- ",password="" to pass
+
+5.get flag!

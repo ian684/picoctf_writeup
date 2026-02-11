@@ -1,0 +1,13 @@
+picoctf It is my Birthday writeup
+
+1.upload two different pdf
+
+2.but their md5 hash need to be same
+
+3.if you get too big , not a pdf , md5 not same all of these messages, 
+
+too big => change a different files
+not a pdf => change extension to .pdf or use burp to change content-type also extension
+md5 not same => just find currect files which md5 hash are same
+
+4.get flag!

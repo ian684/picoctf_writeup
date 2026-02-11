@@ -1,0 +1,11 @@
+picoctf Irish-Name-Repo 3 writeup
+
+1.also use password="' OR 1=1 -- " but error says that our input is "' BE 1=1 -- "
+
+2.guess it might be cacear cipher so calculate is and try again
+
+3.this time is also wrong but we notice that it might just change O=>B , B=>O also R=>E , E=>R
+
+4.so use password="' BE 1=1 -- "
+
+5.get flag!

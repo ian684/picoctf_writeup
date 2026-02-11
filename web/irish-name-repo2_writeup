@@ -1,0 +1,13 @@
+picoctf Irish-Name-Repo 2 writeup 
+
+1.also try user="admin' OR 1=1 --" , password="" 
+
+2.not valid , might be filtered 
+
+3.so try to get which character is filtered 
+
+4.after trying, i know it filter "OR"
+
+5.so i just change it to "AND"
+
+6.get flag!
