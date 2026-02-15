@@ -1,0 +1,13 @@
+picoctf Some Assembly Required 1 writeup
+
+1.look its source code and find a js file 
+
+2.open it and try to use online js compiler to execute it
+
+3.find there is a input name (./JIFxzHyW8W)
+
+4.visit it and it automatically downloads
+
+5.open that file , there is flag at the bottom
+
+6.get flag! 

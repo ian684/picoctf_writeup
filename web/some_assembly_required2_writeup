@@ -1,0 +1,9 @@
+picoctf 
+
+1.it is same like 1, but flag is not directly given to us
+
+2.decomplie wasm file and find there is do xor with 8 in check_flag()
+
+3.so we use xor(flag , 8) to analyze it
+
+4.get flag!

