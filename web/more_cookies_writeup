@@ -1,0 +1,9 @@
+picoctf more cookies writeup
+
+1.its description has three capital alpha => CBC
+
+2.so search some CBC exploit, know that we can use bit flip attack
+
+3.use more_cookies.py to try all bit flip possibility
+
+4.get flag!
