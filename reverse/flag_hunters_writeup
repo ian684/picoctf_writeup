@@ -1,0 +1,11 @@
+picoctf Flag Hunters writeup
+
+1.connect to server and anslyze its source code
+
+2.know we can input a string(crowd: ) without sanitized
+
+3.we can use "RETURN" to go and output any lines
+
+4.just input "aaa;RETURN 0" (because we need to go to start of article , flag is over there) and wait
+
+5.get flag!
