@@ -1,0 +1,9 @@
+picoctf Quantum Scrambler writeup
+
+1.notice that it adds some Confusing list in output
+
+2.so we just jump over them and only choose str
+
+3.use python script (quantum_scrambler.py)
+
+4.get flag!
