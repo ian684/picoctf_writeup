@@ -1,0 +1,27 @@
+picoctf Pico Bank writeup
+
+1.use online apk decompiler
+
+2.find there is otp verify but it stores otp in this apk (code is in /pico-bank.apk/sources/com/example/picobank/otp.java) and otp verify url also here (/verify-otp)
+
+3.so we try to find it in apk , after searching , we find it in strings.xml(/pico-bank.apk/resources/res/values/strings.xml)
+
+4.so use 
+
+curl -X POST http://amiable-citadel.picoctf.net:64776/verify-otp \
+-H "Content-Type: application/json" \
+-d '{"otp":"9673"}'
+
+to verify
+
+5.get a part of flag and get a hint saying that flag is in app
+
+6.so we check the challenge hints, it says flag might be in transaction history
+
+7.so we check the main file (pico-bank.apk/sources/com/example/picobank/MainActivity.java)
+
+8.there are several transaction history and its money number might be binary
+
+9.so we convert it to ascii code and get another part of flag
+
+10.get all flags!

@@ -1,0 +1,13 @@
+picoctf M1n10n'5_53cr37 writeup
+
+1.check main file (/minions.apk/sources/com/example/picoctfimage/MainActivity.java)
+
+2.but there is nothing so i just check a strings.xml (/minions.apk/resources/res/values/strings.xml)
+
+3.there is a value named "Banana" and its value might be flag
+
+4.so i try base64 decode but it is not a flag
+
+6.after searching , i try to use base32 decode 
+
+7.get flag!
