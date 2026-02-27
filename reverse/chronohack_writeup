@@ -1,0 +1,10 @@
+picoctf chronohack writeup
+
+1.look there is random and time module
+
+2.search whether it can be brute forced or not
+
+3.use chronohack.py to bomb it
+# you might need to try more times, if your internet is not good
+
+4.get flag!
