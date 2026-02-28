@@ -1,0 +1,7 @@
+picoctf tap into hash writeup
+
+1.just write a decrypted script and use its key, ciphertext to decode it
+
+2.i use tap_into_hash.py
+
+3.get flag!
