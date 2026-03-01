@@ -1,0 +1,7 @@
+picoctf timer writeup
+
+1.use online apk decompiler (https://www.decompiler.com/)
+
+2.just try to find the flag (in /timer.apk/sources/com/example/timer/BuildConfig.java)
+
+3.get flag!
