@@ -1,0 +1,7 @@
+picoctf crackme-py writeup
+
+1.download source code
+
+2.just use decoded_secret() to decode bezos_cc_secret
+
+3.get flag!
