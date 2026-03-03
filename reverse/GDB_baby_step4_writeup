@@ -1,0 +1,16 @@
+picoctf GDB baby step 4 writeup
+
+1.just look its assembly code
+
+start gdb => gdb debugger0_d
+break point => b main
+look its position => layout asm
+executing => r
+
+2.know it call a function (func1) , so we execute to there
+
+go next line => next
+
+3.when we go into func1, we can see a assembly code (imul), that is our aim
+
+4.get flag!

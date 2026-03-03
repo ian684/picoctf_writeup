@@ -1,0 +1,14 @@
+picoctf GDB baby step 1 writeup
+
+1.use command to get $eax value
+
+start gdb => gdb debbuger0_a
+break a point => b main
+run file => r
+
+2.i try to use "p/x $eax" but flag is wrong
+
+3.so i just use "next" and "p/x $eax" to find flag, when $eax changes
+
+4.get flag!
+# or you can just look assembly and find which value is given to $eax

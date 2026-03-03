@@ -1,0 +1,16 @@
+picoctf GDB baby step 2 writeup
+
+1.also use gdb to get
+
+start gdb => gdb debugger0_b
+break point => b main
+see where out program is executing => layout asm
+executing => r
+
+2.know we know 0x401142 is the end of main function
+
+break the end of main function's point => b *0x401142
+executing => continue
+print $eax => p $eax
+
+3.get flag!

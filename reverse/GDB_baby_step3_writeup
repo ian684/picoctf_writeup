@@ -1,0 +1,19 @@
+picoctf GDB baby step 3 writeup
+
+1.computer is using little endian ,so actually we just need to convert 
+0x22 0x52 0xc9 0x6b => 0x6b 0xc9 0x52 0x22
+
+2.but we also can use command to get value in memory
+
+start gdb => gdb debugger0_c
+break point => b main
+look its position => layout asm
+executing => r
+
+3.now we know where is the end of main function
+
+break the end of main function's point => b *0x40111f
+print $eax => p $eax
+get value in memory => x/4xb $rbp-4
+
+4.get flag!
