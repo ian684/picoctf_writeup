@@ -1,0 +1,22 @@
+picoctf bloat.py writeup
+
+1.download two files
+
+2.look its python file and know its check our input by using 
+
+a = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
+            "[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ "
+if arg432 == a[71]+a[64]+a[79]+a[79]+a[88]+a[66]+a[71]+a[64]+a[77]+a[66]+a[68]:
+	return True
+
+3.so we just run 
+
+a = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
+            "[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ "
+a[71]+a[64]+a[79]+a[79]+a[88]+a[66]+a[71]+a[64]+a[77]+a[66]+a[68]
+
+in ipython
+
+4.run bloat.flag.py and input our answer
+
+5.get flag!

@@ -1,0 +1,12 @@
+picoctf bbbloat writeup
+
+1.use ida to decompile it
+
+ __isoc99_scanf("%d", &v4);
+  if ( v4 == 549255 )
+
+2.so we know it compare our input (v4) and 549255
+
+3.so we execute the binary and input 549255
+
+4.get flag!
