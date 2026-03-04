@@ -1,0 +1,9 @@
+picoctf Bit-O-Asm-1 writeup
+
+1.just open the file
+
+2.you can see "mov eax,0x30"
+
+3.so $eax = 48
+
+4.get flag!

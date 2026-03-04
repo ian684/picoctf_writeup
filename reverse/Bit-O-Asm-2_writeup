@@ -1,0 +1,12 @@
+picoctf Bit-O-Asm-2 writeup
+
+1.just open the file
+
+2.you can see 
+
+mov DWORD PTR [rbp-0x4],0x9fe1a
+mov eax,DWORD PTR [rbp-0x4]
+
+3.so $eax = [rbp-0x4] = 0x9fe1a = 654874
+
+4.get flag!

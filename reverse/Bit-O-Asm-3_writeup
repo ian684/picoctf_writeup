@@ -1,0 +1,21 @@
+picoctf Bit-O-Asm-3 writeup
+
+1.just open the file
+
+2.you can see
+
+<+15>:    mov    DWORD PTR [rbp-0xc],0x9fe1a
+<+22>:    mov    DWORD PTR [rbp-0x8],0x4
+<+29>:    mov    eax,DWORD PTR [rbp-0xc]
+<+32>:    imul   eax,DWORD PTR [rbp-0x8]
+<+36>:    add    eax,0x1f5
+
+3.so 
+
+[rbp-0xc] = 0x9fe1a
+[rbp-0x8] = 0x4
+eax = [rbp-0xc] = 0x9fe1a
+eax *= ([rbp-0x8] = 0x4)
+eax += 0x1f5
+
+4.get flag!
