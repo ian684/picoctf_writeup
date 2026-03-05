@@ -1,0 +1,15 @@
+picoctf keygenme-py writeup
+
+1.look its source code
+
+2.know there is a check function to check our input key
+
+3.but its key is derived from hash and username_trial is at the top of code
+
+hash = hashlib.sha256(username_trial).hexdigest()
+
+4.so we can get the key (45362718 This is the order in which the key picks characters from the hash)
+
+5.combine three part of flag
+
+6.get flag!

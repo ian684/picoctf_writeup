@@ -1,0 +1,15 @@
+picoctf Shop writeup
+
+1.connect it
+
+2.know we might need to buy (2) this but we only have 10 coins
+
+3.if we want to get more coins, we can buy anything with negative quantity
+
+because it use your_coins = your_coins - (quantity * price)
+
+4.so we choose (1) and input quantity -30 and we can see that our coins have increased
+
+5.so now , we can buy flag
+
+6.get flag!

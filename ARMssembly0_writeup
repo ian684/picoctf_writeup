@@ -1,0 +1,14 @@
+picoctf ARMssembly 0 writeup
+
+1.because it is a arm file so we use aarch64-linux-gnu-gcc to compile it
+
+you can also use aarch64-linux-gnu-as and aarch64-linux-gnu-lb
+
+"aarch64-linux-gnu-gcc ./chall.S -static"
+we plus "-static" because if we dont plus it, it might try to load libc
+
+2.use qemu-aarch64 to execute it
+
+"qemu-aarch64 ./a.out 2593949075 2233560849"
+
+3.get flag!
