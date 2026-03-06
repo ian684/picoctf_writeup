@@ -1,0 +1,14 @@
+picoctf patchme.py writeup
+
+1.look its source code 
+
+    if( user_pw == "ak98" + \
+                   "-=90" + \
+                   "adfjhgj321" + \
+                   "sleuth9000"):
+
+2.it check our input whether match this
+
+3.run patchme.py and input ak98-=90adfjhgj321sleuth9000
+
+4.get flag!

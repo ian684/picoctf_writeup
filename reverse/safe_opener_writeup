@@ -1,0 +1,12 @@
+picoctf Safe Opener writeup
+
+1.look its source code
+
+2.know we need to decode encodedkey
+
+3.it uses base64 to encode it so we copy that string and use ipython to decode
+
+import base64
+base64.decode(encodedkey)
+
+4.get flag!

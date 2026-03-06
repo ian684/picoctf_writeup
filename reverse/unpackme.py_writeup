@@ -1,0 +1,15 @@
+picoctf unpackme.py writeup
+
+1.run the python code and know we need to input a password
+
+2.see its source code , it gives us a key and encrypted string 
+
+3.so guess its plain.decode() is code because it uses exec()
+
+4.just add a print(plain.decode()) above exec(plain.decode())
+
+5.run the python code again
+
+6.you can see it print another python code and you can get password and flag in it
+
+7.get flag!
