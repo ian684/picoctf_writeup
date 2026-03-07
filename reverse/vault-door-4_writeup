@@ -1,0 +1,9 @@
+picoctf vault-door-4 writeup
+
+1.look its source code
+
+2.according to its description , we know it uses ascii code to encode it
+
+3.write a python code to decode (vault-doot-4.py)
+
+4.get flag!

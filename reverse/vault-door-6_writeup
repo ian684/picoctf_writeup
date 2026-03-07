@@ -1,0 +1,11 @@
+picoctf vault-door-6 writeup
+
+1.look its source code
+
+2.we know it uses xor
+
+=> passBytes xor 0x55 and compare with myBytes , so we get flag = myBytes xor 0x55
+
+3.write a python code to decode (vault-doot-6.py)
+
+4.get flag!

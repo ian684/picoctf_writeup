@@ -1,0 +1,9 @@
+picoctf vault-door-5 writeup
+
+1.look its source code
+
+2.we know it uses urlencode and baseencode to encode it
+
+3.write a python code to decode (vault-doot-5.py)
+
+4.get flag!
