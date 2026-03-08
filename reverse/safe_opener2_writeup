@@ -1,0 +1,7 @@
+picoctf Safe Opener 2 writeup
+
+1.just use online java decompiler to decompile it (https://www.javadecompilers.com/)
+
+2.you can see it compare input and flag in Safeopen function
+
+3.get flag!

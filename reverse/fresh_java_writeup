@@ -1,0 +1,9 @@
+picoctf Fresh java writeup
+
+1.just use online java decompiler to decompile it (https://www.javadecompilers.com/)
+
+2.you can see a series of if and else
+
+3.follow its compare 
+
+4.get flag!
