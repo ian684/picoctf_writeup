@@ -1,0 +1,11 @@
+picoctf Picker l writeup
+
+1.just look its source code 
+
+2.know it would exec our input + '()' 
+
+3.there is a win() function can print flag
+
+4.connect it and input "win"
+
+5.get flag!

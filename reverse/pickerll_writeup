@@ -1,0 +1,9 @@
+picoctf Picker ll writeup
+
+1.look its source code and know it adds a filter to filter "win"
+
+2.but we also can exec anycode
+
+3.so i input print(open('flag.txt', 'r').read().strip())
+
+4.get flag!

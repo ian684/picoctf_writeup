@@ -1,0 +1,26 @@
+picoctf Picker lll writeup
+
+1.look its source code 
+
+2.know it can call four funcions
+
+  func_table = \
+'''\
+print_table                     \
+read_variable                   \
+write_variable                  \
+getRandomNumber                 \
+'''
+
+3.look its hint , we know we might need to use write_variable to change value
+
+   input 1 to call print_table and see table 
+=> input 3 to call write_variable
+=> variable_name = "print_table" (you can input whichever functions in func_table)
+=> variable_value = "win"
+=> input 1 to recall print_table but now it is win
+
+4.get flag!
+
+# some tips => funcion name is like normal variable name, it can be change
+like here , print_table = win
