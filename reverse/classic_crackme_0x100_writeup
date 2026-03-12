@@ -1,0 +1,13 @@
+picoctf Classic Crackme 0x100 writeup
+
+1.just use ida to reverse it 
+
+2.you can see a encrypt loop
+
+3.follow its steps to write a decrypt function (classic_crackme_0x100.py)
+
+4.run your script
+
+5.connect the server and input your script output
+
+6.get flag!

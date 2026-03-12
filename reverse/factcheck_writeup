@@ -1,0 +1,9 @@
+picoctf FactCheck writeup
+
+1.use ida to reverse it
+
+2.you can see some string and compare function (if)
+
+3.just follow its steps to plus some chars
+
+4.get flag!
