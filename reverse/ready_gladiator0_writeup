@@ -1,0 +1,13 @@
+picoctf Ready Gladiator 0 writeup
+
+1.download and connect it
+
+2.there is 100 rounds and 100 ties
+
+3.google corewars rules (https://www.corewars.org/docs/guide.html)
+
+4.we just change "mov 0 1" to "mov 0 0" in the imp.red
+
+5.connect it one time
+
+6.get flag!

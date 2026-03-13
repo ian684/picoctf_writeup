@@ -1,0 +1,15 @@
+picoctf packer writeup
+
+1.download file
+
+2.use strings to look it but it is so big
+
+3.look its hint, it says that we can try to decompress it
+
+4.so we use upx (upx -d file)
+
+5.it is smaller , try strings again but we plus grep -i flag (strings file | grep -i flag)
+
+6.there is flag but we also need to convert it to bytes from hex
+
+7.get flag!
