@@ -1,0 +1,24 @@
+picoctf unpackme writeup
+
+1.download and try to run it
+
+2.we need to input a favorite number so we guess there is a compare function in it
+
+3.but we cannot use gdb to trace , because it is a compress file
+
+4.so we use "upx -d unpackme-upx" to decompress it 
+
+5.use gdb again , and we can use
+
+layout asm , b main , run ,
+
+6.look its assembly and find
+
+cmp eax, 0xb83cb
+jne ....
+
+7.we know it compare our input with 0xb83cb
+
+8.run the file , and we just input int(0xb83cb , 16)
+
+9.get flag!
