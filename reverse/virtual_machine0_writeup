@@ -1,0 +1,17 @@
+picoctf Virtual Machine 0 writeup
+
+1.download two files
+
+2.searching what is dae file , and using online tool to open it (https://3dviewer.net/index.html)
+
+3.just remove its shell
+
+4.because it says that red is input and blue is output (in this tool , gray might be blue)
+
+5.so if we rotate red gear one time , blue gear will rotate five times (red gear's spikes => 40 , blue gear's spikes => 8)
+
+6.so we multiply number in the input.txt with 5
+
+7.convert int to bytes 
+
+8.get flag!
