@@ -1,0 +1,118 @@
+picoctf weirdSnake writeup
+
+1.just look the file and hints 
+
+2.searching python disassembly , know this is
+
+ 1           0 LOAD_CONST               0 (4)
+              2 LOAD_CONST               1 (54)
+              4 LOAD_CONST               2 (41)
+              6 LOAD_CONST               3 (0)
+              8 LOAD_CONST               4 (112)
+             10 LOAD_CONST               5 (32)
+             12 LOAD_CONST               6 (25)
+             14 LOAD_CONST               7 (49)
+             16 LOAD_CONST               8 (33)
+             18 LOAD_CONST               9 (3)
+             20 LOAD_CONST               3 (0)
+             22 LOAD_CONST               3 (0)
+             24 LOAD_CONST              10 (57)
+             26 LOAD_CONST               5 (32)
+             28 LOAD_CONST              11 (108)
+             30 LOAD_CONST              12 (23)
+             32 LOAD_CONST              13 (48)
+             34 LOAD_CONST               0 (4)
+             36 LOAD_CONST              14 (9)
+             38 LOAD_CONST              15 (70)
+             40 LOAD_CONST              16 (7)
+             42 LOAD_CONST              17 (110)
+             44 LOAD_CONST              18 (36)
+             46 LOAD_CONST              19 (8)
+             48 LOAD_CONST              11 (108)
+             50 LOAD_CONST              16 (7)
+             52 LOAD_CONST               7 (49)
+             54 LOAD_CONST              20 (10)
+             56 LOAD_CONST               0 (4)
+             58 LOAD_CONST              21 (86)
+             60 LOAD_CONST              22 (43)
+             62 LOAD_CONST              23 (106)
+             64 LOAD_CONST              24 (123)
+             66 LOAD_CONST              25 (89)
+             68 LOAD_CONST              26 (87)
+             70 LOAD_CONST              27 (18)
+             72 LOAD_CONST              28 (62)
+             74 LOAD_CONST              29 (47)
+             76 LOAD_CONST              20 (10)
+             78 LOAD_CONST              30 (78)
+
+a encrypted string and this is 
+
+ 2          84 LOAD_CONST              31 ('J')
+             86 STORE_NAME               1 (key_str)
+
+  3          88 LOAD_CONST              32 ('_')
+             90 LOAD_NAME                1 (key_str)
+             92 BINARY_ADD
+             94 STORE_NAME               1 (key_str)
+
+  4          96 LOAD_NAME                1 (key_str)
+             98 LOAD_CONST              33 ('o')
+            100 BINARY_ADD
+            102 STORE_NAME               1 (key_str)
+
+  5         104 LOAD_NAME                1 (key_str)
+            106 LOAD_CONST              34 ('3')
+            108 BINARY_ADD
+            110 STORE_NAME               1 (key_str)
+
+  6         112 LOAD_CONST              35 ('t')
+            114 LOAD_NAME                1 (key_str)
+
+a key and there is 
+
+ 15           0 BUILD_LIST               0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                16 (to 22)
+              6 UNPACK_SEQUENCE          2
+              8 STORE_FAST               1 (a)
+             10 STORE_FAST               2 (b)
+             12 LOAD_FAST                1 (a)
+             14 LOAD_FAST                2 (b)
+             16 BINARY_XOR
+             18 LIST_APPEND              2
+             20 JUMP_ABSOLUTE            4
+        >>   22 RETURN_VALUE
+
+a BINARY_XOR (xor) there 
+
+3.so we know we can use xor to decrypt it 
+
+4.but this python disassembly code might mix the key string , so we need to try all possibly
+
+(or you can just use "picoCTF{" to xor with encrypted string , because key xor evcryted => "picoCTF{....")
+
+5.start to use ipython to decrypt
+
+In [23]: input_list = [4, 54, 41, 0, 112, 32, 25, 49, 33, 3, 0, 0, 57, 32, 108, 23, 48, 4, 9, 70, 7, 110, 36, 8, 108, 7
+       ⋮ , 49, 10, 4, 86, 43, 108, 122, 14, 2, 71, 62, 115, 88, 78]
+
+In [24]: key = ['t','3','o','_','J']
+
+In [26]: keys = []
+
+In [25]: for a in range(5):
+    ...:     for b in range(5):
+    ...:         for c in range(5):
+    ...:             for d in range(5):
+    ...:                 for f in range(5):
+    ...:                     if len(set([a , b , c , d , f])) == 5:
+    ...:                         keys.append(k)
+
+In [20]: for k in keys:
+    ...:     keylist = [ord(char) for char in k]*50
+    ...:     result = [a ^ b for a,b in zip(input_list, keylist)]
+    ...:     result = ''.join(map(chr , result))
+    ...:     if "picoCTF{" in result:
+    ...:         print(result)
+
+6.get flag!
