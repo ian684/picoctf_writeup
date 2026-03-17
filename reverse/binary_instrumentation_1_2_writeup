@@ -1,0 +1,30 @@
+picoctf Binary Instrumentation 1 and 2 writeup
+
+1.download zip file
+
+2.extract it and try to exec it
+
+3.it might stop (sleep) and not do anything for a long time 
+
+4.we can use frida to intercept it but i failed ...
+
+hook.js file =>
+
+var k32 = Module.findExportByName("kernel32.dll", "Sleep")  
+  
+if (k32) {  
+       Interceptor.replace(k32, new NativeCallback(function(ms) {  
+               console.log("Sleep Intercepted!")  
+               return // Skip the sleep  
+       }, "void", ["uint32"]))  
+}
+
+5.so i try another method , i use binwalk to extract it (binwalk -e bininst1.exe)
+
+6.cd in extract file (_bininst1.exe.extracted) and you can see there are several files
+
+7.use "strings 6000" to look it and you can see "Ok, I'm Up! The flag is: cGljb0NURnt3NGtlX20zX3VwX3cxdGhfZnIxZGFfZjI3YWNjMzh9"
+
+8.use base64 to decode it
+
+9.get flag!
