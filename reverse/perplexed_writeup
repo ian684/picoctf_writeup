@@ -1,0 +1,9 @@
+picoctf perplexed writeup
+
+1.look its disassembly code 
+
+2.know there is a check function and it encode and check our input 
+
+3.just write a python script to decode it decoded strings (perplexed.py)
+
+4.get flag!
