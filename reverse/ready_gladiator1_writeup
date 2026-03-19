@@ -1,0 +1,23 @@
+picoctf Ready Gladiator 1 writeup
+
+1.connect it and we need to win at least one time
+
+2.so we search some attack code and find this
+
+code => 
+
+;redcode
+;name Imp Ex
+;assert 1
+loop:   add #4, target     ; 跳跃步长，防止炸到自己
+        mov bomb, @target  ; 把炸弹投向目标
+        jmp loop           ; 循环轰炸
+bomb:   dat #0, #0         ; 致命炸弹
+target: dat #0, #0         ; 瞄准镜
+end
+
+3.this is absolutely a violent attack code
+
+4.use this code and connect it
+
+5.get flag!

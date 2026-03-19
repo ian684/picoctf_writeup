@@ -1,0 +1,20 @@
+picoctf Ready Gladiator 2 writeup
+
+1.connect it and we need to win all rounds
+
+2.this is very difficult for me , so i still search the attack code
+
+code => 
+;redcode
+;name Imp Ex
+;assert 1
+jmp 0,<-2
+end
+
+3.this code just let imp stay there but continuously minus 1 before its position
+
+4.this changes enemy code and let it become "dat" or other chaos code 
+
+5.connect it and use this code 
+
+6.get flag!
