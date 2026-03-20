@@ -1,0 +1,9 @@
+picoctf bytemancy 2 writeup
+
+1.we need to input b"\xff"*3 but this char cannot be input 
+
+2.so we use pwntool to interact with server
+
+3.use "bytemancy2.py" to connect it
+
+4.get flag!

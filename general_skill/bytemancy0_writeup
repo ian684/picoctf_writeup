@@ -1,0 +1,7 @@
+picoctf bytemancy 0 writeup
+
+1.look its source code and know we just need to input "\x65\x65\x65" (eee)
+
+2.connect it and input "eee"
+
+3.get flag!

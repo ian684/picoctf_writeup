@@ -1,0 +1,11 @@
+picoctf ping-cmd writeup
+
+1.connect it and know we can input 8.8.8.8 to ping google
+
+2.but it might use "ping {our input}" , so we might can use "&&" to exec more than one command
+
+3.i try to input "8.8.8.8 && ls" and know there is a file named "flag.txt"
+
+4.and then use "8.8.8.8 && cat flag.txt"
+
+5.get flag!

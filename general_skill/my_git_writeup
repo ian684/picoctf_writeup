@@ -1,0 +1,16 @@
+picoctf MY GIT writeup
+
+1.clone it and look its README 
+
+2.it says that we need to use "root:root@picoctf" to push a "flag.txt"
+
+3.so we use 
+
+git config --global user.name root
+git config --global user.email root@picoctf
+vim flag.txt
+git add .
+git commit -m "aaaaa"
+git push
+
+4.get flag!

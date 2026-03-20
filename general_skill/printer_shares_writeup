@@ -1,0 +1,19 @@
+picoctf Printer Shares writeup
+
+1.look its first hint and search something about smb protocal
+
+2.we know we can use use smb to share some files 
+
+3.and second hint tells us to use smbclient, so we download it
+
+4.use "smbclient -L //mysterious-sea.picoctf.net -p 55178" to list shared files
+
+5.there are two files , flag might be in "shares"
+
+6.so we use "smbclient //mysterious-sea.picoctf.net/shares -p 55178" to interact with this file
+
+7.we can use "ls" to look all files and then use "get flag.txt" to copy one file to our machine
+
+8.use "quit" to cut off interaction and use "cat flag.txt" to print flag
+
+9.get flag!

@@ -1,0 +1,11 @@
+picoctf bytemancy 1 writeup
+
+1.look its source code 
+
+2.if we input "\x65"*1751 , it will give us the flag
+
+3.use ipython and we get "e"*1751 , copy it 
+
+4.connect it and input 
+
+5.get flag!
