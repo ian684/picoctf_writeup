@@ -1,0 +1,20 @@
+picoctf Piece by Piece writeup
+
+1.use "ssh ctf-player@dolphin-cove.picoctf.net -p 49984" to connect it
+
+2.there are some file "instructions.txt  part_aa  part_ab  part_ac  part_ad  part_ae" and we look instructions.txt
+
+3.after we understand instructions , i know we need to combine all "part_a*" and use "unzip combined file"
+
+4.so i use 
+
+ctf-player@pico-chall$ cat part_ab >> part_aa
+ctf-player@pico-chall$ cat part_ac >> part_aa
+ctf-player@pico-chall$ cat part_ad >> part_aa
+ctf-player@pico-chall$ cat part_ae >> part_aa
+
+and unzip part_aa , input password which is in instructions.txt
+
+5.it gives us a flag.txt , cat it out
+
+6.get flag!

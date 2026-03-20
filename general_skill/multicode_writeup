@@ -1,0 +1,15 @@
+picoctf MultiCode writeup
+
+1.download that file 
+
+2.because there is a "=" so first , i try to use base64 to decode it
+
+3.we get a string which might be hex string , so i convert it to 10-base number
+
+4.and convert it to bytes from int
+
+5.and there are two char like %... or something , so i use urldecoder to decode it
+
+6.now we get a string that is very like flag , but it might need to be caesar decoded
+
+7.get flag!
