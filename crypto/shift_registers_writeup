@@ -1,0 +1,13 @@
+picoctf shift registers writeup
+
+1.look its encryption code and encrypted string
+
+2.its key's range is very big but its lfsr just get first 8 bits
+
+3.so we can brute force its first lfsr 
+
+4.also use its function (steplfsr) , xor to decrypt whole string and check it
+
+5.start to write a python script (shift_registers.py)
+
+6.get flag!
