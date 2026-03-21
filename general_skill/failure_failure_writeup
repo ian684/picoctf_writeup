@@ -1,0 +1,39 @@
+picoctf FAILURE FAILURE writeup
+
+1.look its source code 
+
+2.its cfg file 
+
+backend servers
+    option httpchk GET /
+    http-check expect status 200
+    server s1 *:8000 check inter 2s fall 2 rise 3
+    server s2 *:9000 check backup inter 2s fall 2 rise 3
+
+it tells us that if it connect failure two times it turn into server s2
+
+3.so now , we need to find how can we get failure connection
+
+4.there is failure condition in app.py
+
+limiter = Limiter(
+    key_func=global_rate_limit_key,
+    app=app,
+    default_limits=["300 per minute"]
+)
+@limiter.limit("300 per minute")
+
+so if we connect it more than 300 times in per minute , we can get failure
+
+5.there is also a interest thing 
+
+if os.getenv("IS_BACKUP") == "yes":
+    flag = os.getenv("FLAG")
+
+so if we connect to backup server , we can get flag
+
+5.we write a shell script to connect it more than 300 times (failure_failure.sh)
+
+6.run it and reopen the website
+
+7.get flag!

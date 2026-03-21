@@ -1,0 +1,15 @@
+picoctf ABSOLUTE NANO writeup
+
+1.connect it and find there is a flag.txt but we cannot use "cat" or other command to print it out
+
+2.use "sudo -l" to check which commands we can use with root user
+
+3.after using previous command , we know that we can use /bin/nano in /etc/sudoers with root
+
+4.so we use "sudo /bin/nano /etc/sudoers"
+
+5.and press "ctrl r" in sudoers , input which file you want to read it 
+
+6.absolutely , we input flag.txt
+
+7.get flag!

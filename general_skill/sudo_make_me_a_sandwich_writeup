@@ -1,0 +1,11 @@
+picoctf SUDO MAKE ME A SANDWICH writeup
+
+1.connect it and find a flag.txt but we cannot use "cat" to print it out
+
+2.so we try use "sudo -l" to list which command we can use with root identity
+
+3.there is a command named "/bin/emacs" we can use with root identity
+
+4.so use "sudo /bin/emacs flag.txt"
+
+5.get flag!
