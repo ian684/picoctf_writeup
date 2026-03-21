@@ -1,0 +1,17 @@
+picoctf ClusterRSA writeup
+
+1.just use rsa decomposition and get four primes
+
+2.i feel little weird , so i look its hints 
+
+3.hints say that if it is more than one prime , so four primes are ok (n = (p1)*(p2)*(p3)*(p4))
+
+4.so just get phi ((p1-1)*(p2-1)*(p3-1)*(p4-1))
+
+5.and get d (pow(e , -1 , phi))
+
+6.get original message (pow(ct , d , n))
+
+7.convert int to bytes 
+
+8.get flag!
