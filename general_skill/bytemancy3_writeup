@@ -1,0 +1,9 @@
+picoctf bytemancy 3 writeup
+
+1.use "objdump -t spellbook" to reveal the symbol table
+
+2.know we know the position and according the source code , we also need to convert it to little endiance bytes
+
+3.so we can write a python script (bytemancy3.py)
+
+4.get flag!
