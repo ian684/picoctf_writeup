@@ -1,0 +1,26 @@
+picoctf Printer Shares 3 writeup
+
+1.connect the server
+
+2.list its file and get in to shares
+
+"smbclient -L //dolphin-cove.picoctf.net -p 65054"
+"smbclient //dolphin-cove.picoctf.net/shares -p 65054"
+
+3.there is a shell code file (script.sh) and it execute every minute
+
+4.its result will be saved in cron.log
+
+5.but we can change its file content and put it on server
+
+6.it will execute our uploading file
+
+7.i use "get script.sh" and "quit"
+
+8.add some code in this file , i add "cd .. && ls && cat secure-shares/flag.txt >> cron.log"
+
+9.get in to shares again (2.) , use "put script.sh" to change the file
+
+10.wait one minute and use "get cron.log" to get the file which flag is in it
+
+11.get flag!
