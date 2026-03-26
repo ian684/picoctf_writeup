@@ -1,0 +1,9 @@
+picoctf Autorev 1 writeup
+
+1.just use pwntool to input the answer
+
+2.write a python script (autorev1.py)
+
+3.run it
+
+4.get flag!

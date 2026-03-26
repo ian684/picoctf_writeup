@@ -1,0 +1,26 @@
+picoctf Gatekeeper writeup
+
+1.just use ida to open and disassemble it
+
+2.there is two function , one is check whether input is decimal or not , the other is check whether input is hex
+
+3.if we want to get flag , we need to input a number 
+
+=> length is 3 
+=> more than 999
+=> less than 10000
+
+4.if we input decimal , that is impossible
+
+5.so we input a hex , just choose a hex string match the requirement
+
+6.connect the server and input a hex string (i input 3e8)
+
+7.we also need to decrypt the flag
+
+In [36]: a = "}3f3ftc_oc_ip1ac6ftc_oc_ip4_99ftc_oc_ip9_TGftc_oc_ip_xehftc_oc_ip_tigftc_oc_ipid_3ftc_oc_ip{FTCftc_oc_ipo
+       ⋮ cipftc_oc_ip"
+In [32]: for i in range(0 , len(a) , 13):
+    ...:     print(a[i+9:i+13] , end="")
+
+8.get flag!

@@ -1,0 +1,31 @@
+picoctf Hidden Cipher 1 writeup
+
+1.use "unzip hiddencipher.zip" to extract it
+
+2.use "strings hiddencipher" to analyze it , and it might be compressed
+
+3.so we use "upx -d hiddencipher" to decompress it
+
+4.try use "strings hiddencipher" again , and use ida to look its assembly 
+
+5.there is a encrypting process in the main function
+
+6.there is also a get_secret function , it return a string ("S3Cr3t") might be a key
+
+7.so we use ipython to decrypt it
+
+In [3]: key = "S3Cr3t"
+In [9]: enc = "235a201d70201548251358110c552f135409"
+In [20]: for i in range(0 , len(enc) , 2):
+    ...:     t = enc[i]+enc[i+1]
+    ...:     print(chr(int(t,16)^ord(key[j%6])) , end="")
+    ...:     j += 1
+
+its output is "picoCTF{fake_flag}"
+so this a available
+
+8.we try to connect it and get a real flag
+
+9.do decrypting one time
+
+10.get flag!
