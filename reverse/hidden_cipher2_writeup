@@ -1,0 +1,23 @@
+picoctf Hidden Cipher 2 writeup
+
+1.download the file and unzip it
+
+2.try to execute it and it give us a math question
+
+3.answer it and it give us a encrypted flag
+
+4.use ida to open it , we know that it use a int to multiply each char of flag
+
+5.so if we can know gcd of all chars (g), we just need to divide each char by g
+
+6.connect it and answer a math question 
+
+7.gcd all chars of encrypted flag (g), and divide all each char by g
+
+8.use this 
+
+g = 10
+In [1]: for i in a:
+   ...:     print(chr(i//g),end="")
+
+9.get flag!

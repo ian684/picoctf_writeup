@@ -1,0 +1,30 @@
+picoctf The Add/On Trap writeup
+
+1.download the file and use unzip
+
+2.there is a .xpi file , after searching i know it just like zip file 
+
+3.so i still use unzip , there is several files
+
+  inflating: manifest.json           
+  inflating: popup.html              
+  inflating: icons/icon-64.png       
+  inflating: icons/icon-32.png       
+  inflating: assets/styles.css       
+  inflating: assets/script.js        
+  inflating: background/main.js      
+  inflating: META-INF/cose.manifest  
+  inflating: META-INF/cose.sig       
+  inflating: META-INF/manifest.mf    
+  inflating: META-INF/mozilla.sf     
+  inflating: META-INF/mozilla.rsa  
+
+4.you can use whatever command you want which can find the flag
+
+5.the flag is in background/main.js and there are a key and token (key , webhookUrl)
+
+6.look challenge's second hint , we can know that it use fernet cipher
+
+7.use online fernet decoder and the key, token
+
+8.get flag!
