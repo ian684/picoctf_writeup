@@ -1,0 +1,19 @@
+picoctf North-South writeup
+
+1.download it and anslyze it
+
+2.know if our ip addr is from IS (iceland) , we will be redirected to http://south , else http://north
+
+3.so we need to use proxy to connect it
+
+4.i use tor
+
+download => sudo apt install tor
+run it => tor
+check alive => curl -i --socks5-hostname 127.0.0.1:9050 https://check.torproject.org/api/ip
+=> cd /etc/tor
+=> vim torrc (if you want to add something , you need to be root) , plus "ExitNodes {is}" , "StrictNodes 1"
+check your proxy ip => curl --socks5-hostname 127.0.0.1:9050 https://ipinfo.io/json
+connect it => curl --socks5-hostname 127.0.0.1:9050 http://lonely-island.picoctf.net:59316/
+
+5.get flag! 
