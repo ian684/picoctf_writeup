@@ -1,0 +1,7 @@
+picoctf Not TRUe writeup
+
+1.this is NTRU cipher , use lattice attack 
+
+2.you can use online tool or write a sagemath script (not_true.py)
+
+3.get flag!

