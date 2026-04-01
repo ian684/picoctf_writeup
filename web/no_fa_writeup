@@ -1,0 +1,17 @@
+picoctf NO FA writeup
+
+1.download its database file and app.py
+
+2.analyze it and know its user and password , we can use crackstation to decode that hash password
+
+3.get the admin and admin's password 
+
+4.we need to verify otp , look its app.py , we can see it store otp in session 
+
+5.so we use burpsuite to get its session
+
+6.use "flask-unsign --decode -c "your_session"" to decode your session , you will see otp_secret which is otp
+
+7.input otp
+
+8.get flag!

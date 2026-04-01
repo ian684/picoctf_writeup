@@ -1,0 +1,28 @@
+picoctf Bypass Me writeup
+
+1.understand lldb command 
+
+2.use "ssh ctf-player@foggy-cliff.picoctf.net -p port" to connect 
+
+3.and try to run bypassme.bin and its filter function 
+
+4.we can know it filters out all chars except letters
+
+5.so we might need to reverse and get the password
+
+run it with lldb => lldb ./bypassme.bin
+disassemble main function => disassemble --name main
+
+6.we know its decode_password function will return a real password , so we need to set a breakpoint there
+
+set breakpoint => b decode_password
+run it => r
+now we are in decode_password function
+finish running this function => finish
+now its return value is password 
+print out its password => expr (char*)($rbp - 0x110)
+stop lldb => quit
+
+7.run bypassme.bin and input the password
+
+8.get flag!
