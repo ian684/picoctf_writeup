@@ -1,0 +1,39 @@
+picoctf Silent Stream writeup
+
+1.download pcap and python file 
+
+2.this encryption python script just use (data + 42) % 256 to encode it
+
+3.we can use (encoded_data - 42) % 256 to decode it
+
+4.if we want to analyze its pcap file , we need to download wireshark (sudo apt install wireshark)
+
+5.run the wireshark (wireshark) , open "packets.pcap"
+
+6.we only need its data , so we right click on random tcp 
+
+7.left click on follow , click tcp stream
+
+8.we save it as raw file , and use 
+
+def decode_byte(b, key):
+    return (b - key) % 256
+
+def simulate_flag_transfer(filename, key=42):
+
+    with open(filename, "rb") as f:
+        data = f.read()
+
+    decoded_data = bytes(decode_byte(b, key) for b in data)
+    with open("decoded_flag.jpeg", "wb") as f:
+        f.write(decoded_data)
+
+if __name__ == "__main__":
+    simulate_flag_transfer("rawbits.txt")
+
+9.why we decode it to jpeg ? 
+because if you decode it and use "file decoded_flag.*" , you can see its file format
+
+10.open this image file
+
+11.get flag!

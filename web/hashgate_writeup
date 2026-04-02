@@ -1,0 +1,17 @@
+picoctf hashgate writeup
+
+1.visit login page , and look its source code 
+
+2.there is a pair of username and password (guest@picoctf.org , guest)
+
+3.use this pair to login and we can notice that the url is hash string
+
+4.use crackstation to crack it , we get "3000"
+
+5.do you remember this number ? our ID is also "3000"
+
+6.so its url might be userID , so we can write a python script to bruteforce its page name (hashgate.py)
+
+7.run the script and wait it , if you cannot get result , you might need to change your bruteforce range 
+
+8.get flag!
