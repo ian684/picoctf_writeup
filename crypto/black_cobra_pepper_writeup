@@ -1,0 +1,13 @@
+picoctf Black Cobra Pepper writeup
+
+1.look its cipher code 
+
+2.we can see its sub_word and sub_bytes function just return original string
+
+3.we can know this encryption function (AES) is linear now
+
+4.so AES(0,key) = AES(pt1,key) xor AES(pt1,0) , AES(flag,0) = AES(flag,key) xor AES(0,key)
+
+5.write a python script (black_cobra_pepper.py)
+
+6.get flag!

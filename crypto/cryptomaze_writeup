@@ -1,0 +1,9 @@
+picoctf cryptomaze writeup
+
+1.use lfsr to generate key
+
+2.use this key to decrypt AES encrypted string 
+
+3.write a python script to get key and flag (cryptomaze.py)
+
+4.get flag!
