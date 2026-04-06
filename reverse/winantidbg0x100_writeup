@@ -1,0 +1,26 @@
+picoctf WinAntiDbg0x100 writeup
+
+1.use x32-dbg to open it 
+
+2.and we can see it uses <IsDebuggerPresent> to know whether we use debugger
+
+3.we have two options , first is changing its return value , second is changing its jump command
+
+first => 
+set breakpoint at "call dword ptr ds:[<IsDebuggerPresent>]"
+run it
+go to next command 
+change eax's value to 0
+run it
+
+second =>
+set breakpoint at "call dword ptr ds:[<IsDebuggerPresent>]"
+run it
+press "je winantidbg0x100.31161B"
+press space 
+change "jz 0x0031161B" to "jmp 0x0031161B"
+run it
+
+4.look its log 
+
+5.get flag!
