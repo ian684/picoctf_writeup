@@ -1,0 +1,17 @@
+picoctf WinAntiDbg0x200 writeup
+
+1.use x32-dbg to open it
+
+2.and we can see it uses <IsDebuggerPresent> to know whether we use debugger
+
+3.it also uses admin checker to check , so we need to pass it
+
+4.number 2. is same with winantidbg0x100 
+
+5.number 3. is changing "jne winantidbg0x200.F41714" to "jmp winantidbg0x200.F41714"
+
+6.run it 
+
+7.look its log
+
+8.get flag!
