@@ -1,0 +1,19 @@
+picoctf Winantidbg0x300 writeup
+
+1.use UPX tool with  parameter to unpack the executable so we can see the code clearly.-d
+
+2.open the unpacked file with x32dbg and identify the MessageBox logic used for debugger detection
+
+3.change the initial check "je" to "jmp" to bypass the "Debugger Detected" message box.
+
+4.notice the debugger terminates because of the "Fighting the Debugger" mechanism (parent-child process monitoring)
+
+5.locate the CreateProcess logic where it spawns a child process using the parent's pid as an argument
+
+6.go to the ChallengeThreadFunction and locate the test condition right before the CreateProcess call
+
+7.change the "je" to "jmp" at the process creation logic to force the program to continue regardless of the exit code , and change its original jump position to print flag position
+
+8.run the patched version and wait for the program to execute its internal logic
+
+9.get flag!
