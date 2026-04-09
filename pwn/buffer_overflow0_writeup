@@ -1,0 +1,11 @@
+picoctf buffer overflow 0 writeup
+
+1.look its source code and we can know it get 100 chars 
+
+2.and copy to a 16 chars long string , so we can use buffer overflow
+
+3.use "objdump -M intel -d vuln" to get sigsegv_handler function address
+
+4.connect it and input "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa12a9
+
+5.get flag!

@@ -1,0 +1,16 @@
+picoctf buffer overflow 1 writeup
+
+1.look its source code and we know that it get a string
+
+2.but bufsize is 32 , so we can use buffer overflow
+
+3.use "objdump -M intel -d vuln" to get win function address
+
+4.write a python script (buffer_overflow1.py) and run it
+
+5.get flag!
+
+# why offset is 44 
+# because there is "push ebp" , this appends 4 bytes on the stack
+# and "mov eax , [ebp-0x28]" , this sets 40 bytes on the stack
+# (in x86 system)

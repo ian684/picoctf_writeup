@@ -1,0 +1,23 @@
+picoctf buffer overflow 2 writeup
+
+1.look its source code and we know that it get a string
+
+2.it uses get to catch our input , so we can try to use buffer overflow
+
+3.use "objdump -M intel -d vuln" to get win function address
+
+4.write a python script (buffer_overflow2.py) and run it
+
+5.get flag!
+
+# why offset is 112
+# because there is "push ebp" (ebp+0x4), this appends 4 bytes on the stack
+# and "lea eax, [ebp-0x6c]" , this sets 108 bytes on the stack
+# (in x86 system)
+
+# why we need to add b"aaaa"
+# because we need to deceive the win function , let it can get a return address
+
+# why we add two string at the end
+# because there are two condition (if) , we need to bypass them
+# and x86 system gets value which input into win function start at ebp+0x8 (each arg plus 4 bytes => ebp+0x8 , ebp+0xc ...)
