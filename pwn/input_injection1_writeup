@@ -1,0 +1,16 @@
+picoctf Input Injection 1 writeup
+
+1.look its source code , we can know it fget string which maximum is 100 chars and copy to buffer which maximum is 10 chars
+
+2.so we can use buffer overflow , try to connect it and try to input a long string
+
+3.we can know if we dont overflow it , it will exec uname
+
+4.if we overflow , uname will be overlapped 
+
+5.so we can input "aaaaaaaaaals" , "aaaaaaaaaacat flag.txt"
+
+6.get flag!
+
+# you can also use objdump to look its assembly and analyze it
+# i just try this input something and success

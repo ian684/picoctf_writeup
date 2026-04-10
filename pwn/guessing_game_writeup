@@ -1,0 +1,23 @@
+picoctf Guessing Game writeup
+
+1.look its source code and we can find that there is a buffer overflow in the win function
+
+2.but we cannot just overflow a address because there is not any print flag or other useful function
+
+3.absolutely , we need to use rop to get shell and find the flag
+
+4.use its binary file and "ROPgadget --binary vuln > rop"
+
+5.write python script (guessing_game.py)
+
+6.run it and get shell
+
+7.get flag!
+
+# there is also a guessing game after overflow , just write a loop to try all possibility
+# after that , we need to calculate the offset , it is easy
+
+# if it is x86 system , we cannot write b"/bin/sh\0" directly , we need to split it to four chars
+
+# if you dont know how to use rop chain , you can search some studys or writeups
+# or use ai to analyze my payload

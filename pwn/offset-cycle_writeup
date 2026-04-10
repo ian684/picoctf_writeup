@@ -1,0 +1,23 @@
+picoctf offset cycle writeup
+
+1.connect it and read its instruction.txt 
+
+2.we can know that we need to exploit it within 2 min
+
+3.try to use "./start" and look its source code 
+
+4.find it can be buffer overflow , because it use get to read our string 
+
+5.use "objdump -M intel -d x" (x is that binary file name) to look assembly
+
+6.we try it several times and know that its win function is stay at same position 
+
+7.and offset is not same , so now we can write a python script (offset_cycle.py)
+
+=> use "vim ppp.py" and paste our code 
+=> use "objdump -M intel -d x" to get offset (you can see "buffer_overflow_writeup" to learn or search online)
+=> use "python3 ppp.py"
+=> input ./x , namely the file name generate by ./start
+=> input offset
+
+8.get flag!
