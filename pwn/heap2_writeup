@@ -1,0 +1,9 @@
+picoctf heap 2 writeup
+
+1.this challenge is like previous , still need to overflow
+
+2.but this time , we need to change our input data (b"a"*32+p64(win_func_addr))
+
+3.write a python script (heap2.py)
+
+4.get flag!

@@ -1,0 +1,28 @@
+picoctf heap 1 writeup
+
+1.look its source code and we can know that we can write something on input_data
+
+2.use "objdump -M intel --disassemble=init chall" to look its assembly
+
+3.we can see
+
+12be:       48 89 05 bb 2d 00 00    mov    QWORD PTR [rip+0x2dbb],rax        # 4080 <input_data>
+12c5:       c7 00 70 69 63 6f       mov    DWORD PTR [rax],0x6f636970
+12d9:       48 89 05 98 2d 00 00    mov    QWORD PTR [rip+0x2d98],rax        # 4078 <safe_var>
+12e0:       c7 00 62 69 63 6f       mov    DWORD PTR [rax],0x6f636962
+
+it also uses malloc to allocate memory on heap
+
+4.let compute the offset , (0x12c5+0x2dbb)-(0x12e0+0x2d98) == (set_data_addr+heap_addr)-(set_data_addr+heap_addr)
+
+5.we get offset = 32 , so connect the server
+
+=> input 2 to write on input_data
+=> input 'a'*30+"pico" to overflow it
+=> input 1 to print the table and check whether we overflow to "bico" or not
+=> input 4 
+
+6.get flag!
+
+# why our offset is not 30
+# because if our malloc memory not divide by 16 bytes , it will fill it up to 16 , 32 , 48 and so on ... 

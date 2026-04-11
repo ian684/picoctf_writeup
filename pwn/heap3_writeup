@@ -1,0 +1,13 @@
+picoctf heap 3 writeup
+
+1.look its source code and we see that there is a free function we can call
+
+2.so we can 
+
+=> input 5 to free x
+=> input 2 , input 35 (this is x struct size), input 'a'*30+"pico" (overlap a , b , c , total size is 30)
+=> input 4
+
+3.get flag!
+
+# if you dont understand , you can search use after free
