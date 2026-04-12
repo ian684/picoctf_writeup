@@ -1,0 +1,11 @@
+picoctf Echo Escape 2 writeup
+
+1.it is same like previous challenge
+
+2.but last version use x64 (use the letter 'e' to name the start of register) system , this time is x86 (use the letter 'r' to name the start of register)
+
+3.still write a python script (echo_escape2.py)
+
+4.get flag!
+
+# fgets is only when you use a proper size safer than gets ...

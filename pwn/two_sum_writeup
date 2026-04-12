@@ -1,0 +1,10 @@
+picoctf two sum writeup
+
+1.just int overflow , you can see the hint
+
+2.connect it , and input "2147483647 2147483647"
+
+# 2147483647 is the max of int value
+# you can try to input more than 2147483647 in cpp compiler and look its value
+
+3.get flag!

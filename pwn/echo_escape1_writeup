@@ -1,0 +1,11 @@
+picoctf Echo Escape 1 writeup
+
+1.just a normal buffer overflow 
+
+2.write a python script (echo_escape1.py)
+
+3.get flag!
+
+# in the script , we calculate the offset and use "objdump -M intel --disassemble=win vuln" to find win function address
+
+# you can search how to calculate offset or look my previous writeups
