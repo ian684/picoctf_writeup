@@ -1,0 +1,15 @@
+picoctf Local Target writeup
+
+1.just a normal overflow challenge 
+
+2.you can use "objdump -M intel -d local-target" to look its assembly
+
+3.we can know it put a value in [rbp-0x8] and put input in [rbp-0x20]
+
+4.we can compute the offset is 24
+
+5.so input 'a'*24 and we need to use 'A'(65) to overlap on num
+
+6.connect it and input "aaaaaaaaaaaaaaaaaaaaaaaaA"
+
+7.get flag! 

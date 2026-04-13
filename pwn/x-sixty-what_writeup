@@ -1,0 +1,18 @@
+picoctf x-sixty-what writeup
+
+1.look its source code and know that it uses gets to catch our input
+
+2.just write a python script (x-sixty-what.py)
+
+3.get flag!
+
+
+# offset is 72 because 
+# 4012be:       48 8d 45 c0             lea    rax,[rbp-0x40]
+# and we need to add 0x8 bytes from push rbp (64 bits system)
+# and then to add return address which absolutely is flag function
+
+
+# if you just follow steps and cannot get flag
+# you can change flag function address "0x401236" to "0x40123b" (look second hint)
+# because its machine might not be same with ours
