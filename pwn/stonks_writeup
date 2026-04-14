@@ -1,0 +1,13 @@
+picoctf stonks writeup
+
+1.analyze this c file 
+
+2.just find there is a api_buf store flag , and it is in stack
+
+3.just use format string 
+
+4.connect the server , choose 1 option , input a lot of '%p' to get value on stack
+
+5.just convert these hex string to bytes 
+
+6.get flag!

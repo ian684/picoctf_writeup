@@ -1,0 +1,7 @@
+picoctf clutter-overflow writeup
+
+1.just a normal overflow challenge 
+
+2.calculate the offset and plus "0xdeadbeef" , write a python script (clutter-overflow.py)
+
+3.get flag!

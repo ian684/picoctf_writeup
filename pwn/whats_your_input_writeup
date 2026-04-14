@@ -1,0 +1,11 @@
+picoctf What's your input writeup
+
+1.if you look its source code , you can know that it use python 2.7
+
+2.after searching , i know that python2.7 will exec our input 
+
+3.so we can just input the "year" and "city" (these are variable in this script , also a city answer)
+
+4.but we also can input "__import__('os').system('ls')" to rce
+
+5.get flag!
