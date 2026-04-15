@@ -1,0 +1,9 @@
+picoctf gauntlet 0 writeup
+
+1.use ida to anslyze its code
+
+2.know that it uses printf to print our input , so we can exploit it by format string
+
+3.connect it and input %s,%s,%s,%s,%s,%s,%s,%s
+
+4.get a string that is flag!

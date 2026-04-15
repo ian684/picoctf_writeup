@@ -1,0 +1,9 @@
+picoctf format string 1 writeup
+
+1.analyze the source code
+
+2.just use format string injection , %p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,....
+
+3.input this and we can get several hex , just convert it to bytes
+
+4.get flag!

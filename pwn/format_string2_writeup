@@ -1,0 +1,15 @@
+picoctf format string 2 writeup
+
+1.analyze the source code
+
+2.just use format string injection , and we need to change the sus value
+
+3.calculate the offset in stack , input AAAA,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p......
+
+4.we can see in fourteenth value is including 41414141 which is AAAA hex , so offset is 14
+
+5.use "objdump -M intel --disassemble=main vuln" to find sus address ([rip+0x2de7] # 404060 <sus>)
+
+6.and we need to change sus to 0x67616c66 , write a python script 
+
+7.get flag!
