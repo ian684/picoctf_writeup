@@ -1,0 +1,5 @@
+picoctf picker-IV writeup
+
+1.just input win function address (use "objdump -M intel -d picker-IV" to analyze) 
+
+2.get flag!

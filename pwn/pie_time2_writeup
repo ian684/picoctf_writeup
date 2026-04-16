@@ -1,0 +1,31 @@
+picoctf PIE TIME writeup
+
+1.just need to reveal the address because it has ASLR 
+
+2.just calculate where is main function's address in the stack
+
+when we call printf , there is seven variable (rdi , rsi , rdx , rcx , r8 , r9 , [rsp])
+
+rdi is your input
+[rsp] is the top of stack
+
+now we calculate the return address and stack top distance
+
+stack top => [rbp-0x60] (sub rsp, 0x60)
+return address => [rbp+0x8]
+distance is 13
+and plus seven variable is 20
+but rdi is our input so it is not in stack , we need to minus 1
+get 19
+
+3.connect it and input %19$p and use this hex to minus where is call_functions return to (0x1441)
+
+143c:       e8 86 fe ff ff          call   12c7 <call_functions>
+1441:       b8 00 00 00 00          mov    eax,0x0
+this is where call_functions return to (0x1441)
+
+4.use this number to plus win function address (0x136a)
+
+5.input it
+
+6.get flag!
