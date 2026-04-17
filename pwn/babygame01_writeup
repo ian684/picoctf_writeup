@@ -1,0 +1,21 @@
+picoctf babygame 01 writeup
+
+1.download the binary file and use ghidra to analyze it
+
+2.we can see there is a comparsion which compare local_aa4 with '\0'
+
+3.so we need to overwrite local_aa4
+
+4.we can see there is a big list initail after local_aa4 , this if we let our player ('@') walk to there , might overwrite local_aa4
+
+5.so first , we input 'aaaawwww' to go to the begin of that big list
+
+6.input 'aaaa' to overwrite local_aa4
+
+7.now we can see the flag number is changed to 64 (ord('@')) , and we need to win the game 
+
+8.we can see a command 'p' in move_player , this command can directly win the game
+
+9.so we just input it 
+
+10.get flag!

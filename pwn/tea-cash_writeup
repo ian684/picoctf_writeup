@@ -1,0 +1,35 @@
+picoctf tea-cash writeup
+
+1.you need to understand glibc and tcache in this challenge 
+
+2.if we need to run this binary file , we need to patch it (because your system might not fit it , namely glibc)
+
+=> use "strings heapedit | grep -i glibc." to find which glibc version did it use (but it is not always correct , this is king of clue)
+
+=> download glibc data , just use "git clone" to clone which you like it (version is 2.27)
+
+=> download patchelf by using "sudo apt install patchelf"
+
+=> use "patchelf --set-interpreter ./ld-2.27.so ./heapedit" to adjust inerpreter 
+
+=> use "patchelf --set-rpath . ./heapedit" to adjust run libc position
+
+=> chmod +x ld-2.27.so 
+
+3.now , you can run the file , we can analyze it source code 
+
+4.know we need to input a pointer 6 times and it will give us first
+
+5.so we write a script (tea-cash.py) and use gdb to analyze it 
+
+=> we can just input first head pointer
+=> use "vmmap heap" to look where start of heap
+=> use "x/gx $(your_first_address)"
+
+6.we can know that it compare our input and previous address data , so we just input address and look this address data and input next time
+
+7.after several times of input , we can know that our input address increase 0x90 every time
+
+8.we can adjust our script (tea-cash.py) and run it
+
+9.get flag!
