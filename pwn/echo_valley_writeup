@@ -1,0 +1,32 @@
+picoctf Echo Valley writeup
+
+1.we see there is printf(buf) , this can be used format string attack
+
+2.so we use "checksec --file=valley" to check some defense used by this binary
+
+3.it almost open all defense but we can know that we just need to change return address in the stack 
+
+4.so write a python script (echo_valley.py)
+
+5.calculae offset , just use AAAA,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p to analyze its stack
+
+6.get return address because it opens aslr and pie , so we need to leak it
+
+7.we can use "objdump -M intel -d valley" to anslyze how far does [rbp-0x70] (rsp) to [rbp+0x8] (return address position) 
+
+8.know there is 21th in the stack , so we input %21$p to leak the 0x1314 
+    140e:       e8 f4 fe ff ff          call   1307 <echo_valley>
+    1413:       b8 00 00 00 00          mov    eax,0x0
+
+9.and then we can get the base , so we just use base to get address of print_flag address
+
+10.now , we also need to know where the return address is stored (rbp+0x8)
+
+11.just leak the stack saved_rbp , use %20$p (you can check if this is saved_rbp by looking it whether is started with 0xff)
+
+12.so now we can write print_flag_addr on saved_rbp_addr + 8
+# if you use fmtstr_payload , you need to add a requirement which is write_size='short' because buf is not big
+
+13.run this script 
+
+14.get flag!

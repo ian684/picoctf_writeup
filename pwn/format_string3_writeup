@@ -1,0 +1,22 @@
+picoctf format_string 3 writeup
+
+1.because there is not flag store in stack of heap
+
+2.we might need to change puts function pointer in got table to system functions address
+
+3.we can uses "AAAA,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p,%p" to calculate offset 
+
+4.and setvbuf address in libc will be given , so we can get base of libc
+
+5.binary file also didnt open pie , so we dont need to calculate base of elf
+
+6.write a python script , run it 
+
+7.get shell , we can print the flag out
+
+8.get flag!
+
+
+# if you dont understand , you can search gots table to learn more
+# we just change the puts pointer on gots table to system address
+# so if it executes puts , it changes to execute system
