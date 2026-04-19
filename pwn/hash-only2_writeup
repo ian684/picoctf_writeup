@@ -1,0 +1,17 @@
+picoctf hash-only 2 writeup
+
+1.connect the server
+
+2.but there is nothing in home dir , so i try to input "cd"
+
+3.but it is retricted so i try to input "flaghasher"
+
+4.it works , so now we need to find where is it
+
+5.i use "find / -type f -name flaghasher" , you can find it is in /usr/local/bin/
+
+6.but we still cannot use "cd" so we try to type "bash" to create a new bash in this restricted bash 
+
+7.it works too , so now we just "cd /usr/local/bin" and then it is same like "hash-only1_writeup"
+
+8.get flag!

