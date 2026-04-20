@@ -1,0 +1,15 @@
+picoctf RPS writeup
+
+1.just analyze its source code 
+
+2.you can see its play function it compare our input with element of loses list
+
+3.but it uses strstr , this function will check whether the loses[computer_turn] is in player_turn
+
+=> strstr(player_turn, loses[computer_turn])
+
+4.so we just input "rockpaperscissors" , then we can win
+
+5.i write a python script (rps.py)
+
+6.get flag!

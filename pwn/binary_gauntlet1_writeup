@@ -1,0 +1,28 @@
+picoctf Binary Gauntlet 1 writeup
+
+1.use "checksec --file=gauntlet" to look its defence , we can know that it doesnt open NX
+
+2.we use ghidra to decompiler it and we can see it fget our first input and store in a 1000 big heap (local_10) 
+
+3.then it printf it our , fget our input again but this time it strcpy input in 104 big string in stack (local_78)
+
+4.so we can write a shellcode on local_10 and it will copy on local_78 which we can know its address at the first
+
+5.now we need to calculate its offset (how far does local_78 to return address on stack)
+
+  40068f:       89 7d 8c                mov    DWORD PTR [rbp-0x74],edi
+
+6.we can know offset equal 0x74 + 0x8 (saved_rbp) and then is return address
+
+7.so payload should be shellcode + b"a"*offset + p64(local_78_addr)
+
+=> write shellcode on stack 
+=> overlap remaining space
+=> use our shellcode address to overlap the return address
+
+8.write a python script (binary_gauntlet1.py)
+
+9.get flag!
+
+# this challenge can also use format string to leak information on stack
+# if it opens ASLR , NX or canary
