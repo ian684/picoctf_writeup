@@ -1,0 +1,35 @@
+picoctf Binary Gauntlet 2 writeup
+
+1.just download its binary file and use ghidra to decompiler it
+
+2.we can see it is like previous challenge but dont print local_78 address out 
+
+3.moreover , its description indicates that it uses ASLR , so its stack's address might need to be leaked 
+
+4.our strategy is using gdb to calculate the offset between a address in stack and local_78
+
+5.just use "gdb gauntlet" to open it
+
+# you can add "gdb.attach(r)" in your script
+
+=> b main 
+=> vmmap to look its stack start address and check (this step is not necessary)
+=> run
+=> just continue to first input and input "%p|%p|%p|%p|%p|%p|%p|%p|%p|" , you can see there are several hex started by 0x7fff (our choise called first_hex)
+
+# this also a target hex we need to leak and calculate with local_78
+# we just choose the fifth hex which is value in r15 register 
+# you can choose others you think is convenient to look 
+
+=> continue to second input , now we input "AAAAAAAAAAAAAAAAAAAAAAAA"
+=> continue to strcpy function
+=> use x/40gx $rsp to look the stack , you can see a lot of 41 , just use starting address of these 41 to minus first_hex
+
+6.now you get how far does first_hex between local_78 , so you can get real address of local_78 by plus this distance and leak_str (which is real address of first_hex)
+
+7.after we get the address , all steps are like previous challenge overflow shellcode and return address
+# but one thing need to be noticed , the server might not same like this binary file. so we need to fill some nop in front of payload 
+
+8.write a python script (binary_gauntlet2.py) and run it
+
+9.get flag!
