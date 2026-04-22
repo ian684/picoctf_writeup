@@ -1,0 +1,13 @@
+picoctf Binary Gauntlet 3 writeup
+
+1.just download its binary file and use ghidra to decompiler it
+
+2.just like previous challenge but it enables the NX 
+
+3.so we cannot just write our shellcode on memory , but it gives us a libc
+
+4.there might be some one_gadgets in that libc
+
+5.write a python script (binary_gauntlet3.py) and run it
+
+6.get flag!
