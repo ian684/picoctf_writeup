@@ -1,0 +1,16 @@
+picoctf Timeline 0 writeup
+
+1.just use 
+
+=> fls -r -m / partition4.img > body.txt
+=> mactime -b body.txt > timeline.txt
+
+2.you can get a timeline file and we can see the hints 
+
+3.just focus on old time so we use "head -n 50 timeline.txt"
+
+4.find 1985-01-01T17:00:00Z,41,macb,r/rrw-r--r--,0,0,4945,"/bin/bcab" on the top
+
+5.use "icat partition4.img 4945" and decode it by base64
+
+6.get flag!

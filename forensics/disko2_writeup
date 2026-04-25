@@ -1,0 +1,12 @@
+picoctf DISKO 2 writeup
+
+1.just use 
+
+=> mmls disk.img
+=> dd if=disko-2.dd of=linux_part.img bs=512 skip=2048 count=51200
+
+2.we can get a img file about linux part
+
+3.just use strings linux_part.img | grep picoCTF
+
+4.get flag!
