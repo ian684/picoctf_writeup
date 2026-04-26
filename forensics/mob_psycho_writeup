@@ -1,0 +1,11 @@
+picoctf Mob psycho writeup
+
+1.download this apk and look its hints , we can know that we can unzip this file 
+
+2.so we use "unzip mobpsycho.apk" and get several files and dirs 
+
+3.just use "find -name "flag.*" -type f" to find it
+
+4.print the flag out and convert hex to bytes 
+
+5.get flag!

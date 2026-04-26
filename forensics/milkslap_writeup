@@ -1,0 +1,11 @@
+picoctf Milkslap writeup
+
+1.visit that web site and just look its source code 
+
+2.we can know that there is a picture file (/concat_v.png)
+
+3.we just visit it and download the picture
+
+4.we can use "zsteg concat_v.png" to analyze it (if your system says that it is so deep , you can use "export RUBY_THREAD_VM_STACK_SIZE=50000000" and try again)
+
+5.get flag!

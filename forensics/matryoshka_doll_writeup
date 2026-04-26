@@ -1,0 +1,11 @@
+picoctf Matryoshka doll writeup
+
+1.look its hint , we can know it hide some files in that picture 
+
+2.use "binwalk -e filename" to extract it 
+
+3.and then go into that file we can see one zip file and one dir
+
+4.go into that dir and do binwalk one time , and so on
+
+5.get flag!
