@@ -1,0 +1,27 @@
+picoctf like1000
+
+1.just write a bash shell and run it
+
+#!/bin/bash
+
+IFS=$'\n'
+
+echo "開始遞迴解壓任務..."
+
+while [ "$(ls *.tar 2>/dev/null)" ]; do
+    for file in *.tar; do
+        echo "正在解壓: $file"
+
+        tar -xf "$file"
+
+        rm "$file"
+
+        echo "已完成 $file 並移除原始檔。"
+    done
+done
+
+find . -name "*.txt" -type f -delete
+
+echo "所有檔案已解壓至底層，且清理完畢！"
+
+2.get flag!
