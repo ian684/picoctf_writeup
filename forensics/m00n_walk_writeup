@@ -1,0 +1,9 @@
+picoctf m00n walk writeup
+
+1.we can look hints but i still dont know which kind of decoding it uses
+
+2.so i just use ai to guess it , that might be sstv , you can search it to know why
+
+3.now we just use online decoder , i use https://sstv-decoder.mathieurenaud.fr/
+
+4.get flag!

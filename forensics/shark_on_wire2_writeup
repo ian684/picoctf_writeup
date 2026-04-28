@@ -1,0 +1,11 @@
+picoctf shark on wire 2 writeup
+
+1.just use wireshark to open but i had searched for a long time , nothing..
+
+2.after searching , we know there are several udp package and sending data to port 22
+
+3.and flag is all sender's port last three digits ascii ...
+
+4.just write a python script and run it 
+
+5.get flag!

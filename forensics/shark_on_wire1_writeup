@@ -1,0 +1,13 @@
+picoctf shark on wire 1 writeup
+
+1.use wireshark to open it
+
+2.we can eximine tcp , udp stream , tcp stream is nothing 
+
+3.so we start to look udp steam , then we can see something by use filter on top and input "udp.stream eq 6"
+
+# you also find something by use "udp.stream eq 7" , but this absolutely is not flag
+
+4.right click on whichever package , click follow => udp stream
+
+5.get flag!
