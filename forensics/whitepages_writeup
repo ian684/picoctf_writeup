@@ -1,0 +1,11 @@
+picoctf WhitePages writeup
+
+1.we can use online hex editor to analyze it 
+
+2.it is combined by "e2 80 83" and "20" , so i guess we might can replace fomer to 0 and latter to 1
+
+3.get a long binary
+
+4.just use cipher chef to decode to ascii code
+
+5.get flag!

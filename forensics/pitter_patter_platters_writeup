@@ -1,0 +1,9 @@
+picoctf Pitter, Patter, Platters writeup
+
+1.look its hints , we can know its flag might be stored in slack space
+
+2.just use "fls suspicious.dd.sda1" to look its chunks , there is a txt file and its inode its 12
+
+3.and use "icat -s suspicious.dd.sda1 12" , reverse the output
+
+4.get flag!

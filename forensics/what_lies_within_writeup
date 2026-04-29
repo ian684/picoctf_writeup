@@ -1,0 +1,12 @@
+picoctf What Lies Within writeup
+
+1.look its hint , we can know that there might something in this png
+
+2.just try to use "strings , binwalk , zsteg , exiftool" to analyze it 
+
+3.find the flag by zsteg 
+
+4.get flag!
+
+
+# it uses steganography to hide the flag
