@@ -1,0 +1,16 @@
+picoctf Trivial Flag Transfer Protocol writeup
+
+1.just use wireshark to open it
+
+2.we can click file => export Objects => tftp => save all 
+
+3.now we get several files , we can decrypt plan , instructions.txt with ROT13
+
+=> I USED THE PROGRAM AND HID IT WITH-DUEDILIGENCE . CHECK OUT THE PHOTOS
+=> TFTP DOESNT ENCRYPT OUR TRAFFIC SO WE MUST DISGUISEOUR FLAG TRANSFER . FIGURE OUT AWAY TO HIDE THE FLAG AND I WILL CHECK BACK FOR THE PLAN
+
+4.so we just use "dpkg -I program.deb" to check this deb file , we can confirm it uses steghide to hide some data in this picture 
+
+5.according to plan file , we can know the password is "DUEDILIGENCE" , so we use "steghide extract -sf picture3.bmp -p DUEDILIGENCE" to get a flag.txt
+
+6.get flag!

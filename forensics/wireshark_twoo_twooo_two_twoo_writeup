@@ -1,0 +1,13 @@
+picoctf Wireshark twoo twooo two twoo... writeup
+
+1.just use wireshark to open it 
+
+2.and we can see there are several http packages , there are also many files named flag 
+
+3.but i dont think those are flag , so i keep searching 
+
+4.then i find there are dns packages , these packages' host name might be the flag which is encoded and split to several chunks 
+
+5.just collect these chunks "cGljb0NU , RntkbnNf , M3hmmWxf , ZnR3X2R1 , YWRlZmQf=" and decode it by base64
+
+6.get flag!
