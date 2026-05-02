@@ -1,0 +1,13 @@
+picoctf Wireshark doo dooo do doo... writeup
+
+1.just use wireshark to open it
+
+2.click file => export Objects => http
+
+3.we can find a file sent from 18.222.37.134
+
+4.just click it and save 
+
+5.cat it out and use caesar to decrypt it 
+
+6.get flag!

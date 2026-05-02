@@ -1,0 +1,23 @@
+picoctf File types writeup
+
+1.just series of decompressing
+
+2.get flag!
+
+# some of decompress tools demand the extension , so you just use mv command to change it
+
+# you can use file to check the file types and use the precise tools 
+
+all decompressed command 
+
+xz -d flag
+lzop -d flag.lzop
+uudecode flag
+ar x flag
+cpio -idv < flag
+bunzip2 flag
+gunzip flag
+lzip -d flag
+lz4 -d flag
+lzma -d flag
+
