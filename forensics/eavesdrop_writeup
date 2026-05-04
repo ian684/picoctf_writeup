@@ -1,0 +1,13 @@
+picoctf Eavesdrop writeup
+
+1.just use wireshark to open it
+
+2.we can look its tcp stream , there are some conversations including decrypted command and password 
+
+=> openssl des3 -d -salt -in file.des3 -out file.txt -k supersecretpassword123
+
+3.and you also can see that they say they use port 9002 to send flag so we just find it and store it in our machine
+
+4.use that command to decrypt it
+
+5.get flag!

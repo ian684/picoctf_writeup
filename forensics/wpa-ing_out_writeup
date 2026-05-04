@@ -1,0 +1,11 @@
+picoctf WPA-ing Out writeup
+
+1.just follow its hints
+
+2.download the aircrack-ng (sudo apt install aircrack-ng) , download the rockyou.txt (you can clone or download it online)
+
+3.use "aircrack-ng -w rockyou.txt wpa-ing_out.pcap" 
+
+4.get the password , wrap it by picoCTF{}
+
+5.get flag!
