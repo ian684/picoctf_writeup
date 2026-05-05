@@ -1,0 +1,7 @@
+picoctf Disk, disk, sleuth! writeup
+
+1.just use "gzip -d filename" to decompress it
+
+2.try to grep the strings in this img "strings filename | grep "pico""
+
+3.get flag!

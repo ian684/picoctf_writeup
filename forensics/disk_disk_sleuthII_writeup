@@ -1,0 +1,28 @@
+picoctf Disk, disk, sleuth! II writeup
+
+1.still try to use "strings filename | grep "pico"" but nothing
+
+2.it gives us a filename , so we might need to find it
+
+3.use "srch_strings -t d dds2-alpine.flag.img | grep "down-at-the-bottom.txt"" , get "2939936 down-at-the-bottom.txt"
+
+4.we try to cut this area "dd if=dds2-alpine.flag.img bs=1 skip=2939936 count=10000 of=flag.txt" but just nothing
+
+5.now we need to analyze its img file chunks "mmls dds2-alpine.flag.img"
+
+DOS Partition Table
+Offset Sector: 0
+Units are in 512-byte sectors
+
+      Slot      Start        End          Length       Description
+000:  Meta      0000000000   0000000000   0000000001   Primary Table (#0)
+001:  -------   0000000000   0000002047   0000002048   Unallocated
+002:  000:000   0000002048   0000262143   0000260096   Linux (0x83)
+
+6.we can see there is Linux system chunk in 2048 to 262143
+
+7.so we "fls -r -o 2048 dds2-alpine.flag.img | grep "down-at-the-bottom.txt"" , get "+ r/r 18291:    down-at-the-bottom.txt"
+
+8.we get the inode , just use "icat -o 2048 filename 18291"
+
+9.get flag!
