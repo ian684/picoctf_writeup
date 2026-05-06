@@ -1,0 +1,5 @@
+picoctf PcapPoisoning writeup
+
+1.just use "strings filename | grep "pico""
+
+2.get flag!
