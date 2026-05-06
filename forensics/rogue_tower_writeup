@@ -1,0 +1,15 @@
+picoctf Rogue Tower writeup
+
+1.use wireshark to open it 
+
+2.we can see there are several http packages which store some data
+
+3.just collect these data one by one and use base64 to decode it 
+
+4.but we also need to xor it
+
+5.just use known head => 'picoCTF{' to xor with decoded string , we can get a 8 digits number 
+
+6.just use that to xor with decoded string
+
+7.get flag!

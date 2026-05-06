@@ -1,0 +1,15 @@
+picoctf Event-Viewing writeup
+
+1.i just use double click on the file in windows system
+
+2.we can search event id (you can find the filter right of window in action , named filter current log)
+
+=> 1033 download some software applications
+=> 4657 some value about login have been changed 
+=> 1074 who call shutdown commands
+
+3.we can collect three parts of flag in these three filter 
+
+4.decode it by base64 decoder
+
+5.get flag!
