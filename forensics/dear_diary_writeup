@@ -1,0 +1,17 @@
+picoctf Dear Diary writeup
+
+1.use autopsy to open it (i use linux version and hook it to localhost)
+
+# sudo apt install autopsy 
+# sudo autopsy
+# find the dns like localhost:9999 and paste it to your browser
+
+2.we can create or open a case and just use keyword search 
+
+3.i originally think it is just let me find some strings like "flag , pico" but it actually let us find ".txt"
+
+4.we can search ".txt" and look their contents with hex 
+
+5.find some "pic" , "oCF" strings , just collect them
+
+6.get flag!

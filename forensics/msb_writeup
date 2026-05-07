@@ -1,0 +1,15 @@
+picoctf MSB writeup
+
+1.because it says that we cannot use lsb to find the hiden data
+
+2.we can see the picture , it is very messy , so it might be msb
+
+# the challenge's name also is MSB
+
+3.i use stegsolve downloaded on github
+
+4.just choose data extract => click red 7 , blue 7 , green 7 (high digits) => save text 
+
+5.just find the flag in that text file 
+
+6.get flag!

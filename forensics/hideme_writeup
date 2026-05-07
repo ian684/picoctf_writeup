@@ -1,0 +1,9 @@
+picoctf hideme writeup
+
+1.because it says that it might something hide in it 
+
+2.we just use "binwalk -e flag.png" and find there are something in it
+
+3.we can find a png file in /secret/flag.png
+
+4.get flag!
