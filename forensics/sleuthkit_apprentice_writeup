@@ -1,0 +1,13 @@
+picoctf Sleuthkit Apprentice writeup
+
+1.just use "mmls filename" to analyze its partition (i also use strings and grep to try it)
+
+2.use "fls -o 2048 filename" or "fls -o 0000360448 filename" , i guess the flag might stored in second Linux partition and in root
+
+3.so i use "fls -o 0000360448 filename 1995" (1995 is root's inode) to look files in it
+
+4.continue to use "fls -o 0000360448 filename 3981" (3981 is my_folder's inode)
+
+5.use "icat -o 0000360448 filename 2082" and "icat -o 0000360448 filename 2371"
+
+6.get flag!

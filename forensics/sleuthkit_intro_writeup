@@ -1,0 +1,9 @@
+picoctf Sleuthkit Intro writeup
+
+1.just follow its steps , 
+
+=> download the img.gz and use "gzip -d filename" and "mmls filename"
+
+2.connect the server and input the length about Linux partition
+
+3.get flag!

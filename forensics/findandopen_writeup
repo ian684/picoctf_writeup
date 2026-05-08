@@ -1,0 +1,13 @@
+picoctf FindAndOpen writeup
+
+1.just use wireshark to open it 
+
+2.we can see there are some Ethernet packages
+
+3.also can find a string with base64 encoded , so we just decode it and get a first part of flag
+
+4.i originally think we might need to find the password from other packages but this first part of flag actually is password 
+
+5.just decompress that zip file and use the first part of flag to open it 
+
+6.get flag!
