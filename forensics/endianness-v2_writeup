@@ -1,0 +1,11 @@
+picoctf endianness-v2 writeup
+
+1.because the challenge name and the description , we can know it may be need to change endianness
+
+2.look the file hex , we try to reverse the hex by every four bytes , and we can see there is a jfif head 
+
+3.so we use cipher chef to swap endianness
+
+4.open the jpg file 
+
+5.get flag!

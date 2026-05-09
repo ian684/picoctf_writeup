@@ -1,0 +1,11 @@
+picoctf MacroHard WeakEdge writeup
+
+1.i originally want to use ppt opener to open it but it appears some error
+
+2.so i just use terminal to analyze it
+
+3.first , i try to use binwalk , and i notice there is a file named hidden
+
+4.so i just cat it out and use base64 to decode it 
+
+5.get flag!
