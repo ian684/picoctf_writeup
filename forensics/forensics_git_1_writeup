@@ -1,0 +1,27 @@
+picoctf Forensics Git 1 writeup
+
+1.this challenge is like previous
+
+2.we still go to the secrets and use git command 
+
+3.i try to use "git log" and find there are two commit , one is add flag , the other one is remove flag
+
+commit 5fb8194539c770a830b8ba089a50778c07072b03 (HEAD -> master)
+Author: ctf-player <ctf-player@example.com>
+Date:   Wed Nov 19 09:20:05 2025 +0000
+
+    Remove flag
+
+commit 177789af0b300e043ea8f54ea57d6cee352291ae
+Author: ctf-player <ctf-player@example.com>
+Date:   Wed Nov 19 09:20:05 2025 +0000
+
+    Add flag
+
+4.so we just use "git reset 177789af0b300e043ea8f54ea57d6cee352291ae" to go back to add flag's time
+
+5.also use "git status" to look which file did he remove , and use "git restore filename" to restore it
+
+6.cat that file out 
+
+7.get flag!

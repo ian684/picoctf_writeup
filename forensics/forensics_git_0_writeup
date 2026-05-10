@@ -1,0 +1,9 @@
+picoctf Forensics Git 0 writeup
+
+1.just use gzip and binwalk to extract it 
+
+2.and we can find there are .git and note.txt in "_disk.img.extracted/ext-root-0/home/ctf-player/Code/secrets"
+
+3.so we can use git command in this dir , just use "git log"
+
+4.get flag!

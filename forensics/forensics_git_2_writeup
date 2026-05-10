@@ -1,0 +1,9 @@
+picoctf Forensics Git 2 writeup
+
+1.just like previous challenge but if we want to execute git command we need to adjust enviroment variable
+
+2.use "export GIT_DIR=$(pwd)/.git" , "export GIT_WORK_TREE=$(pwd)" in killer-chat-app
+
+3.now we can execute git command and just like previous challenge 
+
+4.get flag!
