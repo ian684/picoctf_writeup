@@ -1,0 +1,18 @@
+picoctf tunn3l v1s10n writeup
+
+1.we just use some analyzing tools (binwalk strings | grep xxd | less)
+
+2.we can notice that there is a bmp file head , so we might need to fix it
+
+=> 0A - 0D (36 00 00 00)
+=> 0E - 11 (28 00 00 00)
+
+3.after fixing these two sections , we can open the picture and see a string ...
+
+4.but absolutely that is not a flag , we might need to lengthen the picture
+
+=> 16 - 17 (50 03) # or more big hex
+
+5.open the picture again
+
+6.get flag!

@@ -1,0 +1,7 @@
+picoctf DISKO 3 writeup
+
+1.just use binwalk -e to extract this partition but you might need to wait
+
+2.just go in to your extracted dir and you can see a flag file
+
+3.get flag!
