@@ -1,0 +1,17 @@
+picoctf Blast from the past writeup
+
+1.this challenge need us to change the time tags in the jpg file
+
+2.so we can use =>
+
+exiftool "-AllDates=1970:01:01 00:00:00.001" "-DateTimeOriginal=1970:01:01 00:00:00.001" "-CreateDate=1970:01:01 00:00:00.001" "-ModifyDate=1970:01:01 00:00:00.001" "-OffsetTime=+00:00" "-SubSecTimeOriginal=001" "-SubSecTimeDigitized=001" "-SubSecTime=001" original.jpg
+
+3.and i try so many methods to change the samsung timestamp but all methods are not available
+
+4.so i think it might just written in the hex or somewhere , i use the online hex editor to fix it
+
+5.i find a string in the bottom UTC_Data1700513181420 , just change it to UTC_Data0000000000001
+
+6.connect the server 
+
+7.get flag!

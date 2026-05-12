@@ -1,0 +1,21 @@
+picoctf Bitlocker-1 writeup
+
+1.we need to get the key from this img partition's hash (windows img)
+
+2.so we download the bitlocker2john.py on the github and execute "bitlocker2john.py -i imgname > hash.txt"
+
+3.download the rockyou.txt and use hashcat -m 22100 -a 0 hash.txt rockyou.txt
+
+4.and we can get the password (jacqueline) from 
+
+$bitlocker$0$16$cb4809fe9628471a411f8380e0f668db$1048576$12$d04d9c58eed6da010a000000$60$68156e51e53f0a01c076a32ba2b2999afffce8530fbe5d84b4c19ac71f6c79375b87d40c2d871ed2b7b5559d71ba31b6779c6f41412fd6869442d66d:jacqueline
+
+5.now we just need to mount it 
+
+=> sudo mkdir -p /mnt/bitlocker
+=> sudo mkdir -p /mnt/bitlocker_mount
+=> sudo dislocker -v -V c/Users/PC/Downloads/bitlocker-1.dd -ujacqueline -- /mnt/bitlocker
+=> sudo mount -o loop,ro /mnt/bitlocker/dislocker-file /mnt/bitlocker_mount (",ro" , because it require us to mount it with read-only)
+=> now we can visit this system file (bitlocker_mount)
+
+6.get flag!
