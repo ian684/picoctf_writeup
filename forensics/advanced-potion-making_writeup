@@ -1,0 +1,18 @@
+picoctf advanced-potion-making writeup
+
+1.just use "xxd filename | less" to analyze it
+
+2.we can find some tags which are from png file , so we might need to fix this file to png
+
+=> 00 - 03 (89 50 4E 47)
+=> 08 - 0B (00 00 00 0D)
+
+# we also can use pngcheck tools to find which bytes are corrupted
+
+3.now we can open it and see a red picture 
+
+4.i try to use some online tools to find flag (https://www.georgeom.net/StegOnline/)
+
+5.choose half lsb , and download it 
+
+6.get flag! (picoCTF{w1z4rdry})

@@ -1,0 +1,15 @@
+picoctf Operation Oni writeup
+
+1.just use "gzip -d filename" , "binwalk -e filename" to extract this img file 
+
+2.and we can go in to that dir and use "find | grep "key_file"" or "find | grep "ssh""
+
+3.we can see there is a id_ed25519 file in the root dir , this might be the key
+
+4.use this file key to connect the server (ssh -i id_ed25519 -p 51006 ctf-player@saturn.picoctf.net) but you will find there is a warning
+
+5.so we need to change the permissions to 600 or other low permissions (chmod 600 id_ed25519)
+
+6.connect it again , we can see a flag.txt
+
+7.get flag!

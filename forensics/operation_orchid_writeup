@@ -1,0 +1,17 @@
+picoctf Operation Orchid writeup
+ 
+1.also use "gzip -d filename" , "binwalk -e filename" to analyze it 
+ 
+2.i try to use "find | grep "pico"" , "find | grep "flag"" and find a file named "flag.txt.enc"
+
+3.just go in to the dir where flag.txt.enc locate
+
+4.we can see there are two file (flag.txt.enc , .ash_history)
+
+5.if we see flag.txt.enc , we will find the encrypted string
+
+6.just check the .ash_history , we can find the encrypting command (openssl aes256 -salt -in flag.txt -out flag.txt.enc -k unbreakablepassword1234567) 
+
+7.just use the decrypting command (openssl aes256 -d -salt -in flag.txt.enc -out flag.txt -k unbreakablepassword1234567)
+
+8.get flag!
