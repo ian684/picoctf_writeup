@@ -1,0 +1,15 @@
+picoctf Weird File writeup
+
+1.just use "strings filename | grep "pico"" and "binwalk -e filename"
+
+2.we can start to analyze it and we can find some interesting things in the word dir
+
+3.we can use strings on these two files "vbaData.xml" , "vbaProject.bin" , we can find the "PROJECT.THISDOCUMENT.AUTOOPEN" and "PROJECT.THISDOCUMENT.RUNPYTHON" in the first 
+
+4.so this docm file might hide some attacker's malicious program , so we just use "strings vbaProject.bin"
+
+5.we can find a base64 encoded string in the output (Ret_Val = Shell("python -c 'print(\"cGljb0NURnttNGNyMHNfcl9kNG5nM3IwdXN9\")'" & " " & Args, vbNormalFocus))
+
+6.just decode it 
+
+7.get flag!
