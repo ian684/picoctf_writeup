@@ -1,0 +1,5 @@
+picoctf Bitlocker-2 writeup
+
+1.just use "strings memdump.mem | grep -i "pico""
+
+2.get flag!

@@ -1,0 +1,11 @@
+picoctf Torrent Analyze writeup
+
+1.follow its hints and we can use wireshark filter to find the BT-DHT
+
+2.we can see there is so many packages containing the hash and this hash is the most (e2467cbf021192c241367b892230dc1e05c0580e) 
+
+3.just use "https://www.virustotal.com/gui/home/search" this online tool to find this file name (hash)
+
+4.we get "ubuntu-19.10-desktop-amd64.iso_torrent_info.dat" just wrap "ubuntu-19.10-desktop-amd64.iso" by picoCTF{}
+
+5.get flag!
