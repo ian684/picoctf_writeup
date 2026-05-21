@@ -12,8 +12,6 @@ picoctf_writeup/
 ├── pwn/                    # Binary exploitation challenges
 ├── reverse/                # Reverse engineering challenges
 ├── web/                    # Web exploitation challenges
-├── Bitlocker-2_writeup/    # Writeup for Bitlocker-2
-├── torrent_analyze_writeup/# Writeup for torrent analysis challenge
 └── README.md
 ```
 
