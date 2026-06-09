@@ -1,0 +1,27 @@
+picoctf Java Script Kiddie writeup
+
+1.visit that page and look its source code, we can find there is a javascipt code 
+
+2.after analyzing this code, we can know that it just check our input whether length reach 16
+
+3.and use each char in our input, to do something on bytes (at the start of the code, it use $get to get this array)
+
+4.then it remove all zero at the end of result and combine it with "data:image/png;base64," to get a png and display it on page
+
+5.so we might need to guess or brute force this key 
+
+6.because all head of png files are "0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, 0x00, 0x00, 0x00, 0x0D, 0x49, 0x48, 0x44, 0x52", so we can use this to check whether this key is valid 
+
+7.also we can guess the key is only including 0 to 9
+
+8.use these information to write a python script (java_script_kiddie.py)
+
+9.run it and get a series of key (because it might be several key can let us get the same head but different content)
+
+10.just test all keys and you can see a qr code 
+
+11.download it, use "zbarimg pngfilename"
+
+12.get flag!
+
+# you can get bytes array by using "$.get("bytes", function(resp) {bytes = Array.from(resp.split(" "), x => Number(x));});" and "console.log(bytes)" in browser console 
