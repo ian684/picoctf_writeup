@@ -1,0 +1,79 @@
+picoctf Java Script Kiddie 2 writeup
+
+1.this challenge is similar to previous, we just analyze its source code
+
+2.we can find that our input's length need to be 32 but it use "shifter = Number(key.slice((i*2),(i*2)+1));"
+
+3.so it just use 1,3,5,7... not care about 2,4,6...
+
+4.we still can use previous script (just add a '0' after each number , java_script_kiddie2.py)
+
+5.try all strings in output 
+
+var passwords = [
+    "90500010809070506010703070607070", "90500010809070506010803070607070", "90500010809070506010903070607070",
+    "90500010809070506020703070607070", "90500010809070506020803070607070", "90500010809070506020903070607070",
+    "90500010809070506030703070607070", "90500010809070506030803070607070", "90500010809070506030903070607070",
+    "90500010809070507010703070607070", "90500010809070507010803070607070", "90500010809070507010903070607070",
+    "90500010809070507020703070607070", "90500010809070507020803070607070", "90500010809070507020903070607070",
+    "90500010809070507030703070607070", "90500010809070507030803070607070", "90500010809070507030903070607070",
+    "90505010809070506010703070607070", "90505010809070506010803070607070", "90505010809070506010903070607070",
+    "90505010809070506020703070607070", "90505010809070506020803070607070", "90505010809070506020903070607070",
+    "90505010809070506030703070607070", "90505010809070506030803070607070", "90505010809070506030903070607070",
+    "90505010809070507010703070607070", "90505010809070507010803070607070", "90505010809070507010903070607070",
+    "90505010809070507020703070607070", "90505010809070507020803070607070", "90505010809070507020903070607070",
+    "90505010809070507030703070607070", "90505010809070507030803070607070", "90505010809070507030903070607070"
+];
+var currentIndex = 0;
+var controlDiv = document.createElement("div");
+controlDiv.style.position = "fixed";
+controlDiv.style.top = "10px";
+controlDiv.style.right = "10px";
+controlDiv.style.zIndex = "9999";
+controlDiv.style.background = "#fff";
+controlDiv.style.padding = "15px";
+controlDiv.style.border = "2px solid #333";
+controlDiv.style.borderRadius = "8px";
+controlDiv.style.boxShadow = "0 4px 6px rgba(0,0,0,0.1)";
+controlDiv.innerHTML = `
+    <div style="font-weight: bold; margin-bottom: 8px; color: #333;">密碼爆破控制台</div>
+    <div id="pwd_info" style="font-family: monospace; font-size: 12px; margin-bottom: 10px;">進度: 1 / ${passwords.length}</div>
+    <div id="pwd_val" style="font-family: monospace; font-size: 14px; background: #eee; padding: 4px; margin-bottom: 10px; word-break: break-all;">${passwords[0]}</div>
+    <button id="btn_prev" style="padding: 5px 10px; margin-right: 5px; cursor: pointer;">◀ 上一組</button>
+    <button id="btn_next" style="padding: 5px 10px; cursor: pointer;">下一組 ▶</button>
+    <div style="font-size: 11px; color: #666; margin-top: 8px;">提示：亦可使用鍵盤 ◀ / ▶ 鍵切換</div>
+`;
+document.body.appendChild(controlDiv);
+function updateTest() {
+    var targetPwd = passwords[currentIndex];
+    document.getElementById("pwd_info").innerText = `進度: ${currentIndex + 1} / ${passwords.length}`;
+    document.getElementById("pwd_val").innerText = targetPwd;
+    assemble_png(targetPwd);
+    console.log(`目前測試第 ${currentIndex + 1} 組密碼: ${targetPwd}`);
+}
+document.getElementById("btn_prev").addEventListener("click", function() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateTest();
+    }
+});
+document.getElementById("btn_next").addEventListener("click", function() {
+    if (currentIndex < passwords.length - 1) {
+        currentIndex++;
+        updateTest();
+    }
+});
+window.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowLeft" && currentIndex > 0) {
+        currentIndex--;
+        updateTest();
+    } else if (e.key === "ArrowRight" && currentIndex < passwords.length - 1) {
+        currentIndex++;
+        updateTest();
+    }
+});
+updateTest();
+
+6.just find the qrcode and use "zbarimg filename"
+
+7.get flag!
