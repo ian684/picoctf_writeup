@@ -1,0 +1,22 @@
+picoctf Some Assembly Required writeup
+
+1.open the page and look its source code 
+
+2.we can find a link <script src="rTEuOmSfG3.js"></script>, just open "http://wily-courier.picoctf.net:63797/rTEuOmSfG3.js"
+
+3.we can find a obfuscated javascript code, i use "https://deobfuscate.io/" to deobfuscate
+
+4.we can find it fetch from let _0x487b31 = await fetch('./qCCYI0ajpD'); , just open "http://wily-courier.picoctf.net:63797/qCCYI0ajpD"
+
+5.it will automatically download a wasm file, now we need to reverse it
+
+6.i use "https://webassembly.github.io/wabt/demo/wasm2wat/" to disassemble it (you also can use ida pro or ghidra)
+
+7.and analyze it, i find it check our input whether same like flag but it use copy_char to encrypt our input
+# input => encrypted input => encrypted input compare with encrypted flag => result
+# decrypt that encrypted flag
+# flag and key can be found at the bottom (global variables)
+
+8.we need to write a script to decrypt it (some_assembly_required.py) (it just xor key and flag)
+
+9.get flag!
