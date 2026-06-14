@@ -1,0 +1,12 @@
+picoctf Some Assembly Required 4 writeup
+
+1.just get a wasm file like previous challenge (some_assembly_required3_writeup)
+
+2.and use "wasm-decompile filename" to get c code 
+
+3.i just spent a lot of time to reverse it and conclude a encoded function and of course decoded function
+
+4.write a python code (some_assembly_required4.py) and run it
+# c[3] and c[1] is the string index , so c[3][1072] is that string[c[3]]
+
+5.get flag!
